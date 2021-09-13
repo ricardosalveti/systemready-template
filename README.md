@@ -35,6 +35,9 @@ For ACS-ES and ACS-IR, under the `acs_results` partition:
     /uefi
     /uefi_dump
 
+For ACS-IR, also include the `results.md` output from running the SCT results
+parser script from https://gitlab.arm.com/systemready/edk2-test-parser.
+
 ### `./manual-results/`
 
 Place any results from manually performed tests in this directory tree.
@@ -214,6 +217,7 @@ For IR, after collecting the results the directory tree should look like this:
 .
 ├── acs-console.log
 ├── acs_results/
+│   ├── results.md
 │   ├── app_output/
 │   │   ├── CapsuleApp_ESRT_table_info.log
 │   │   └── CapsuleApp_FMP_protocol_info.log
