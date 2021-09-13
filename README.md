@@ -13,11 +13,11 @@ If using serial console, capture a full console log from first power on
 until completion of ACS tests. Must include all output from firmware.
 Should end at a Linux busybox shell prompt after running FWTS tests.
 
-### `./acs-results/`
-Place an entire copy of the 'LUV-Results' or 'acs-results' partitions, as
+### `./acs_results/`
+Place an entire copy of the `LUV-Results` or `acs_results` partitions, as
 follows:
 
-For Enterprise ACS, under the 'LUV-Results' partition:
+For Enterprise ACS, under the `LUV-Results` partition:
 
     /luv-results-<date>
         /sbsa_results
@@ -26,7 +26,7 @@ For Enterprise ACS, under the 'LUV-Results' partition:
         /SCT_RUN
         /sdei_results
 
-For ACS-ES and ACS-IR, under the 'acs-results' partition:
+For ACS-ES and ACS-IR, under the `acs_results` partition:
 
     /fwts
     /linux
@@ -213,7 +213,7 @@ For IR, after collecting the results the directory tree should look like this:
 ```
 .
 ├── acs-console.log
-├── acs-results/
+├── acs_results/
 │   ├── app_output/
 │   │   ├── CapsuleApp_ESRT_table_info.log
 │   │   └── CapsuleApp_FMP_protocol_info.log
