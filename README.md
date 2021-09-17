@@ -152,6 +152,27 @@ execute.
     Shell> CapsuleApp.efi -P
     Shell> CapsuleApp.efi -E
 
+#### `./fw/capsule-update.log`
+Demonstrate that `UpdateCapsule()` works by capturing a log of using
+CapsuleApp.efi from the UEFI shell to install a different version of
+firmware.
+
+Start with a copy of the ACS image on an SD card or USB drive and put
+a copy of the firmware capsule into the `BOOT` volume.
+Begin capture before releasing board from reset so that the initial
+firmware log messages are captured.
+Boot the ACS image, choose the default Grub option, and then press a
+key to break out of running the ACS tests.
+From the UEFI shell, use CapsuleApp.efi to install the new version
+of firmware.
+CapsuleApp.efi will cause the board to reboot after installing.
+The U-Boot console log should now show a different version of firmware.
+
+```
+Shell> fs2:\
+FS2:\> efi/boot/app/capsuleapp.efi capsule.bin
+```
+
 ### `./os-logs/`
 
 #### `./os-logs/linux-[distroname]-[distroversion]/`
