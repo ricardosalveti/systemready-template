@@ -2,6 +2,13 @@
 This repo structure is the template for collecting compliance evidence for a
 SystemReady certification.
 
+## Verification script
+A `check-sr-results.py` verification script is available in the [SystemReady
+scripts] repository, which can verify if a directory structure is conforming to
+this template.
+
+[SystemReady scripts]: https://gitlab.arm.com/systemready/systemready-scripts
+
 ## General Instructions
 General instructions for collecting SystemReady compliance logs:
 
