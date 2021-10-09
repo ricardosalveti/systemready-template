@@ -1,34 +1,34 @@
 General information
 -------------------
-- Arm SystemReady Band: SR|ES|IR|LS
-- System name:
-- Prepared by:
-- E-mail:
-- Date:
+- Arm SystemReady Band: IR
+- System name: NXP i.MX8MP EVK
+- Prepared by: Ricardo Salveti
+- E-mail: ricardo@foundries.io
+- Date: 22/Oct/21
 
 System Information
 ------------------
-- Company:
-- System:
-- SoC:
-- FW version:
-- Memory:
-- Storage devices / disks:
-- Network controllers:
-- Other Hardware information:
+- Company: Foundries.io
+- System: NXP i.MX8MP EVK
+- SoC: iMX8MP
+- FW version: LmP v83+ based on NXP 2021 LF 5.10.35 2.0.0
+- Memory: 6GB
+- Storage devices / disks: eMMC - 32GB
+- Network controllers: FEC Ethernet 1Gbps
+- Other Hardware information: EVK
 
 Test Logs and Results
 ----------------------
-- ACS version used:
-- ACS URL (if pre-built binary):
+- ACS version used: v21.09_1.0
+- ACS URL (if pre-built binary): https://github.com/ARM-software/arm-systemready/blob/main/IR/prebuilt_images/v21.09_1.0/ir_acs_live_image.img.xz
 - Changes to ACS (if built from source):
 
 - Test Logs collected
-[ ] ACS - SCT
+[x] ACS - SCT
 [ ] ACS - (S)BSA - UEFI
 [ ] ACS - (S)BSA - Linux
-[ ] ACS - FWTS
-[ ] ACS - Linux boot log
-[ ] ACS - Linux dumps
-[ ] ACS - UEFI Shell dumps
+[x] ACS - FWTS
+[x] ACS - Linux boot log
+[x] ACS - Linux dumps
+[x] ACS - UEFI Shell dumps
 
