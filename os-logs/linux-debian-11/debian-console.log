@@ -1,0 +1,1911 @@
+U-Boot SPL 2021.04+fio+gfac7c7dfe6 (Oct 08 2021 - 01:44:35 +0000)
+power_bd71837_init
+DDRINFO: start DRAM init
+DDRINFO: DRAM rate 3000MTS
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC2
+SPL: Booting primary boot path: using 0x300 offset for next boot image
+## Checking hash(es) for config config-1 ... OK
+## Checking hash(es) for Image atf ... sha256+ OK
+## Checking hash(es) for Image uboot ... sha256+ OK
+## Checking hash(es) for Image ubootfdt ... sha256+ OK
+## Checking hash(es) for Image optee ... sha256+ OK
+## Checking hash(es) for Image bootscr ... sha256+ OK
+NOTICE:  BL31: v2.4(release):lf-5.10.52-2.1.0-rc2-0-gbb4957067-dirty
+NOTICE:  BL31: Built : 04:45:39, Sep  8 2021
+I/TC:
+I/TC: Non-secure external DT found
+I/TC: OP-TEE version: 3.10.0-113-g0c95ab1e (gcc version 10.2.0 (GCC)) #1 Fri 08 Oct 2021 0
+6:28:00 PM UTC aarch64
+I/TC: Primary CPU initializing
+I/TC: Primary CPU switching to normal world boot
+
+
+U-Boot 2021.04+fio+gfac7c7dfe6 (Oct 08 2021 - 01:44:35 +0000)
+
+alloc space exhausted
+CPU:   i.MX8MMQ rev1.0 1800 MHz (running at 1200 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 35C
+Reset cause: POR
+Model: NXP i.MX8MM EVK board
+DRAM:  2 GiB
+TCPC:  Vendor ID [0x1fc9], Product ID [0x5110], Addr [I2C1 0x52]
+Power supply on USB2
+TCPC:  Vendor ID [0x1fc9], Product ID [0x5110], Addr [I2C1 0x50]
+MMC:   FSL_SDHC: 1, FSL_SDHC: 2
+Loading Environment from FAT... *** Warning - bad CRC, using default environment
+
+[*]-Video Link 0adv7535_mipi2hdmi adv7535@3d: Can't find cec device id=0x3c
+fail to probe panel device adv7535@3d
+mxs_video lcdif@32e00000: failed to get any video link display timings
+probe video device failed, ret -22
+
+        [0] lcdif@32e00000, video
+[            (1*installer)  2 shell  3 shell  4- log           ][ Jan 01  0:04 ]
+        [1] mipi_dsi@32e10000, video_bridge
+        [2] adv7535@3d, panel
+adv7535_mipi2hdmi adv7535@3d: Can't find cec device id=0x3c
+fail to probe panel device adv7535@3d
+mxs_video lcdif@32e00000: failed to get any video link display timings
+probe video device failed, ret -22
+In:    serial
+Out:   serial
+Err:   serial
+
+ BuildInfo:
+  - ATF bb49570
+
+Net:   eth0: ethernet@30be0000
+Hit any key to stop autoboot:  0
+47085 bytes read in 16 ms (2.8 MiB/s)
+starting USB...
+Bus usb@32e40000: Port not available.
+USB is stopped. Please issue 'usb start' first.
+switch to partitions #0, OK
+mmc1 is current device
+Scanning mmc 1:2...
+Scanning disk mmc@30b50000.blk...
+** Unrecognized filesystem type **
+Scanning disk mmc@30b60000.blk...
+Found 6 disks
+** Unable to read file ubootefi.var **
+Failed to load EFI variables
+adv7535_mipi2hdmi adv7535@3d: Can't find cec device id=0x3c
+fail to probe panel device adv7535@3d
+mxs_video lcdif@32e00000: failed to get any video link display timings
+BootOrder not defined
+EFI boot manager: Cannot load any image
+Found EFI removable media binary efi/boot/bootaa64.efi
+856064 bytes read in 11 ms (74.2 MiB/s)
+Booting /efi\boot\bootaa64.efi
+Welcome to GRUB!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                GNU GRUB  version 2.04-20
+
+ ^L^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^P
+ ^B*Install                                                                              ^B
+ ^B Graphical install                                                                    ^B
+ ^B Advanced options ...                                                                 ^B
+ ^B Dark theme option...                                                                 ^B
+ ^B Install with speech synthesis                                                        ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^T^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^X
+
+      Use the M-2 and M-< keys to select which entry is highlighted.
+      Press enter to boot the selected OS, `e' to edit the commands before booting
+      or `c' for a command-line.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I/TC: Secondary CPU 1 initializing
+I/TC: Secondary CPU 1 switching to normal world boot
+I/TC: Secondary CPU 2 initializing
+I/TC: Secondary CPU 2 switching to normal world boot
+I/TC: Secondary CPU 3 initializing
+I/TC: Secondary CPU 3 switching to normal world boot
+[    0.164334] debugfs: Directory 'dummy-iomuxc-gpr@30340000' with parent 'regmap' already
+ present!
+Starting system log daemon: syslogd, klogd.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+haveged: command socket is listening at fd 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/var/run/utmp: No such file or directory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[                           (0*start)                          ][ Jan 01  0:00 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[                     0- start   (2*shell)                     ][ Jan 01  0:00 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[                0 start  2- shell   (3*shell)                 ][ Jan 01  0:00 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[             0 start  2 shell  3- shell   (4*log)             ][ Jan 01  0:00 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[        0 start   (1*shell)  2 shell  3 shell  4- log         ][ Jan 01  0:00 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ^B                             Central       M-^R                             ^B
+  ^B                             Hawaii        0                             ^B
+  ^B          Guided - use entire disk                           0           ^B
+  ^B          Guided - use entire disk                           0           ^B
+  ^B         Configure software RAID                              M-^R          ^B
+  ^B         Configure iSCSI volumes                              0          ^B
+  ^B         MMC/SD card #2 (mmcblk1) - 31.9 GB SD SB32G          M-^R          ^B
+  ^B         Configure the Logical Volume Manager                 M-^R          ^B
+  ^B         MMC/SD card #3 (mmcblk2) - 15.8 GB MMC DG4016        M-^R          ^B
+  ^B         Configure encrypted volumes                          M-^R          ^B
+  ^B         MMC/SD card #3 (mmcblk2) - 15.8 GB MMC DG4016        0          ^B
+  ^B         Configure iSCSI volumes                              M-^R          ^B
+  ^B                                                              M-^R          ^B
+  ^B         >     #2     15.7 GB        ext4        primary      0          ^B
+  ^B         Configure software RAID                              M-^R          ^B
+  ^B         Configure iSCSI volumes                              0          ^B
+  ^B         MMC/SD card #2 (mmcblk1) - 31.9 GB SD SB32G          M-^R          ^B
+  ^B         Configure the Logical Volume Manager                 M-^R          ^B
+  ^B         MMC/SD card #3 (mmcblk2) - 15.8 GB MMC DG4016        M-^R          ^B
+  ^B         Configure encrypted volumes                          M-^R          ^B
+  ^B         MMC/SD card #3 (mmcblk2) - 15.8 GB MMC DG4016        0          ^B
+  ^B          Use as:                Ext4 journaling file system  M-^R          ^B
+  ^B          Format the partition:  yes, format it               0          ^B
+  ^B          Mount options:         defaults                     M-^R          ^B
+  ^B                                                              M-^R          ^B
+  ^B          Label:                 none                         M-^R          ^B
+  ^B          Format the partition:  yes, format it               M-^R          ^B
+  ^B          Reserved blocks:       5%                           M-^R          ^B
+  ^B          Mount point:           /                            M-^R          ^B
+  ^B          Reserved blocks:       5%                           0          ^B
+  ^B          Mount options:         defaults                     M-^R          ^B
+  ^B          Label:                 none                         M-^R          ^B
+  ^B          Reserved blocks:       5%                           M-^R          ^B
+  ^B          Resize the partition (currently 15.7 GB)            0          ^B
+  ^B         Configure the Logical Volume Manager                  M-^R         ^B
+  ^B         MMC/SD card #3 (mmcblk2) - 15.8 GB MMC DG4016         M-^R         ^B
+  ^B         Configure encrypted volumes                           M-^R         ^B
+  ^B         MMC/SD card #3 (mmcblk2) - 15.8 GB MMC DG4016         0         ^B
+  ^B         Configure iSCSI volumes                               M-^R         ^B
+  ^B                                                               M-^R         ^B
+  ^B         >     #2     15.7 GB     F  ext4        primary  /    0         ^B
+  ^B                      [ ] ... GNOME                 0                    ^B
+  ^B                      [ ] ... GNOME Flashback       M-^R                    ^B
+  ^B                      [ ] ... GNOME Flashback       0                    ^B
+  ^B                      [ ] ... Cinnamon              M-^R                    ^B
+  ^B                      [ ] ... GNOME Flashback       M-^R                    ^B
+  ^B                      [ ] ... Cinnamon              0                    ^B
+  ^B                      [ ] ... LXDE                  M-^R                    ^B
+  ^B                      [ ] ... KDE Plasma            M-^R                    ^B
+  ^B                      [ ] ... LXDE                  0                    ^B
+      ^B  Configure the keyboard                                      M-^R   ^B
+      ^B  Partition disks                                             M-^R   ^B
+      ^B  Detect and mount installation media                         M-^R   ^B
+      ^B  Partition disks                                             0   ^B
+      ^B  Configure the package manager                               M-^R   ^B
+      ^B  Load installer components from installation media           M-^R   ^B
+      ^B  Select and install software                                 M-^R   ^B
+      ^B  Detect network hardware                                     M-^R   ^B
+      ^B  Select and install software                                 0   ^B
+      ^B  Continue without boot loader                                M-^R   ^B
+      ^B  Configure the network                                       M-^R   ^B
+      ^B  Finish the installation                                     M-^R   ^B
+      ^B  Set up users and passwords                                  M-^R   ^B
+      ^B  Finish the installation                                     0   ^B
+      ^B  Configure the clock                                         M-^R   ^B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ^B   ^B  Configure the network                                       M-^R   ^B  ^B
+      ^B  Install the base system                                     M-^R   ^B
+  ^B   ^B  Set up users and passwords                                  M-^R   ^B  ^B
+      ^B  Configure the package manager                               M-^R   ^B
+  ^B   ^B  Configure the clock                                         M-^R   ^B  ^B
+      ^B  Select and install software                                 M-^R   ^B
+Requesting system reboot
+                        [ 1227.393004] reboot: Restarting system
+
+U-Boot SPL 2021.04+fio+gfac7c7dfe6 (Oct 08 2021 - 01:44:35 +0000)
+power_bd71837_init
+DDRINFO: start DRAM init
+DDRINFO: DRAM rate 3000MTS
+DDRINFO:ddrphy calibration done
+DDRINFO: ddrmix config done
+Normal Boot
+Trying to boot from MMC2
+SPL: Booting primary boot path: using 0x300 offset for next boot image
+## Checking hash(es) for config config-1 ... OK
+## Checking hash(es) for Image atf ... sha256+ OK
+## Checking hash(es) for Image uboot ... sha256+ OK
+## Checking hash(es) for Image ubootfdt ... sha256+ OK
+## Checking hash(es) for Image optee ... sha256+ OK
+## Checking hash(es) for Image bootscr ... sha256+ OK
+NOTICE:  BL31: v2.4(release):lf-5.10.52-2.1.0-rc2-0-gbb4957067-dirty
+NOTICE:  BL31: Built : 04:45:39, Sep  8 2021
+I/TC:
+I/TC: Non-secure external DT found
+I/TC: OP-TEE version: 3.10.0-113-g0c95ab1e (gcc version 10.2.0 (GCC)) #1 Fri 08 Oct 2021 0
+6:28:00 PM UTC aarch64
+I/TC: Primary CPU initializing
+I/TC: Primary CPU switching to normal world boot
+
+
+U-Boot 2021.04+fio+gfac7c7dfe6 (Oct 08 2021 - 01:44:35 +0000)
+
+alloc space exhausted
+CPU:   i.MX8MMQ rev1.0 1800 MHz (running at 1200 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 44C
+Reset cause: POR
+Model: NXP i.MX8MM EVK board
+DRAM:  2 GiB
+TCPC:  Vendor ID [0x1fc9], Product ID [0x5110], Addr [I2C1 0x52]
+Power supply on USB2
+TCPC:  Vendor ID [0x1fc9], Product ID [0x5110], Addr [I2C1 0x50]
+MMC:   FSL_SDHC: 1, FSL_SDHC: 2
+Loading Environment from FAT... *** Warning - bad CRC, using default environment
+
+[*]-Video Link 0adv7535_mipi2hdmi adv7535@3d: Can't find cec device id=0x3c
+fail to probe panel device adv7535@3d
+mxs_video lcdif@32e00000: failed to get any video link display timings
+probe video device failed, ret -22
+
+        [0] lcdif@32e00000, video
+        [1] mipi_dsi@32e10000, video_bridge
+        [2] adv7535@3d, panel
+adv7535_mipi2hdmi adv7535@3d: Can't find cec device id=0x3c
+fail to probe panel device adv7535@3d
+mxs_video lcdif@32e00000: failed to get any video link display timings
+probe video device failed, ret -22
+In:    serial
+Out:   serial
+Err:   serial
+
+ BuildInfo:
+  - ATF bb49570
+
+Net:   eth0: ethernet@30be0000
+Hit any key to stop autoboot:  0
+47085 bytes read in 16 ms (2.8 MiB/s)
+starting USB...
+Bus usb@32e40000: Port not available.
+USB is stopped. Please issue 'usb start' first.
+MMC: no card present
+switch to partitions #0, OK
+mmc2(part 0) is current device
+[            (1*installer)  2 shell  3 shell  4- log           ][ Oct 09 18:46 ]
+
+
+
+
+
+
+
+  ^L^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@$ Finishing the installation ^\^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^P
+  ^B                                                                         ^B
+  ^B                                   90%                                   ^B
+  ^B                                                                         ^B
+The system is going down NOW!ystem...                                       ^B
+  ^B                          haveged: haveged: Stopping due to signal 15    ^B
+  ^T^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^X
+Sent SIGKILL to all processes
+Scanning mmc 2:1...
+47085 bytes read in 6 ms (7.5 MiB/s)
+MMC: no card present
+Scanning disk mmc@30b50000.blk...
+Disk mmc@30b50000.blk not ready
+Scanning disk mmc@30b60000.blk...
+Found 3 disks
+** Unable to read file ubootefi.var **
+Failed to load EFI variables
+adv7535_mipi2hdmi adv7535@3d: Can't find cec device id=0x3c
+fail to probe panel device adv7535@3d
+mxs_video lcdif@32e00000: failed to get any video link display timings
+BootOrder not defined
+EFI boot manager: Cannot load any image
+Found EFI removable media binary efi/boot/bootaa64.efi
+1811840 bytes read in 11 ms (157.1 MiB/s)
+Booting /efi\boot\bootaa64.efi
+Welcome to GRUB!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error: no suitable video mode found.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                GNU GRUB  version 2.04-20
+
+ ^L^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^P
+ ^B*Debian GNU/Linux                                                                     ^B
+ ^B Advanced options for Debian GNU/Linux                                                ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^B                                                                                      ^B
+ ^T^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^X
+
+      Use the M-2 and M-< keys to select which entry is highlighted.
+      Press enter to boot the selected OS, `e' to edit the commands before booting
+      or `c' for a command-line. ESC to return previous menu.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Loading Linux 5.10.0-8-arm64 ...
+Loading initial ramdisk ...
+I/TC: Secondary CPU 1 initializing
+I/TC: Secondary CPU 1 switching to normal world boot
+I/TC: Secondary CPU 2 initializing
+I/TC: Secondary CPU 2 switching to normal world boot
+I/TC: Secondary CPU 3 initializing
+I/TC: Secondary CPU 3 switching to normal world boot
+[    0.163181] debugfs: Directory 'dummy-iomuxc-gpr@30340000' with parent 'regmap' already
+ present!
+/dev/mmcblk2p2: clean, 29703/956592 files, 294453/3821307 blocks
+
+Debian GNU/Linux 11 imx8mm-lpddr4-evk-ebbr ttymxc1
+
+imx8mm-lpddr4-evk-ebbr login: systemready
+Password:
+Linux imx8mm-lpddr4-evk-ebbr 5.10.0-8-arm64 #1 SMP Debian 5.10.46-5 (2021-09-23) aarch64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+systemready@imx8mm-lpddr4-evk-ebbr:~$ su -
+Password:
+root@imx8mm-lpddr4-evk-ebbr:~# dmesg
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 5.10.0-8-arm64 (debian-kernel@lists.debian.org) (gcc-10 (Debi
+an 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1 SMP Debian 5.10.
+46-5 (2021-09-23)
+[    0.000000] Machine model: FSL i.MX8MM LPDDR4 EVK with QCA WIFI revC board
+[    0.000000] efi: EFI v2.80 by Das U-Boot
+[    0.000000] efi: ESRT=0xb9cc0040 RTPROP=0xb9cc2040 SMBIOS=0xb9cbe000 MEMRESERVE=0x96562
+040
+[    0.000000] secureboot: Secure boot disabled
+[    0.000000] esrt: Reserving ESRT space from 0x00000000b9cc0040 to 0x00000000b9cc0078.
+[    0.000000] OF: reserved mem: failed to allocate memory for node 'linux,cma'
+[    0.000000] NUMA: No NUMA configuration found
+[    0.000000] NUMA: Faking a node at [mem 0x0000000040000000-0x00000000bfffffff]
+[    0.000000] NUMA: NODE_DATA [mem 0xbdbdab00-0xbdbdcfff]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040000000-0x00000000bfffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040000000-0x00000000b9af6fff]
+[    0.000000]   node   0: [mem 0x00000000b9af7000-0x00000000b9af8fff]
+[    0.000000]   node   0: [mem 0x00000000b9af9000-0x00000000b9cb5fff]
+[    0.000000]   node   0: [mem 0x00000000b9cb6000-0x00000000b9cbcfff]
+[    0.000000]   node   0: [mem 0x00000000b9cbd000-0x00000000b9cbdfff]
+[    0.000000]   node   0: [mem 0x00000000b9cbe000-0x00000000b9cbefff]
+[    0.000000]   node   0: [mem 0x00000000b9cbf000-0x00000000b9cc1fff]
+[    0.000000]   node   0: [mem 0x00000000b9cc2000-0x00000000b9cc2fff]
+[    0.000000]   node   0: [mem 0x00000000b9cc3000-0x00000000b9cc3fff]
+[    0.000000]   node   0: [mem 0x00000000b9cc4000-0x00000000b9cc6fff]
+[    0.000000]   node   0: [mem 0x00000000b9cc7000-0x00000000b9cc7fff]
+[    0.000000]   node   0: [mem 0x00000000b9cc8000-0x00000000b9cccfff]
+[    0.000000]   node   0: [mem 0x00000000b9ccd000-0x00000000b9ccdfff]
+[    0.000000]   node   0: [mem 0x00000000b9cce000-0x00000000b9ccefff]
+[    0.000000]   node   0: [mem 0x00000000b9ccf000-0x00000000b9cd0fff]
+[    0.000000]   node   0: [mem 0x00000000b9cd1000-0x00000000b9cd1fff]
+[    0.000000]   node   0: [mem 0x00000000b9cd2000-0x00000000bccdffff]
+[    0.000000]   node   0: [mem 0x00000000bcce0000-0x00000000bcceffff]
+[    0.000000]   node   0: [mem 0x00000000bccf0000-0x00000000bdffffff]
+[    0.000000]   node   0: [mem 0x00000000be000000-0x00000000bfffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040000000-0x00000000bfffffff]
+[    0.000000] On node 0 totalpages: 524288
+[    0.000000]   DMA zone: 8192 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 524288 pages, LIFO batch:63
+[    0.000000] cma: Reserved 64 MiB at 0x00000000b5800000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: Trusted OS migration not required
+[    0.000000] psci: SMC Calling Convention v1.2
+[    0.000000] percpu: Embedded 33 pages/cpu s95192 r8192 d31784 u135168
+[    0.000000] pcpu-alloc: s95192 r8192 d31784 u135168 alloc=33*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: ARM erratum 845719
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 516096
+[    0.000000] Policy zone: DMA
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.10.0-8-arm64 root=UUID=4b70
+0114-448b-47c5-8fd6-e9cd16b8741f ro quiet
+[    0.000000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:on, heap free:off
+[    0.000000] Memory: 1048456K/2097152K available (11776K kernel code, 2436K rwdata, 7012
+K rodata, 5440K init, 598K bss, 127660K reserved, 65536K cma-reserved)
+[    0.000000] random: get_random_u64 called from __kmem_cache_create+0x38/0x560 with crng
+_init=0
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 38535 entries in 151 pages
+[    0.000000] ftrace: allocated 151 pages with 5 groups
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4.
+[    0.000000]  Rude variant of Tasks RCU enabled.
+[    0.000000]  Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: 128 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] GICv3: Distributor has no Range Selector support
+[    0.000000] GICv3: 16 PPIs implemented
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000038880000
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] arch_timer: cp15 timer(s) running at 8.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1d854df
+40, max_idle_ns: 440795202120 ns
+[    0.000004] sched_clock: 56 bits at 8MHz, resolution 125ns, wraps every 2199023255500ns
+[    0.000668] Console: colour dummy device 80x25
+[    0.000710] printk: console [tty0] enabled
+[    0.000805] Calibrating delay loop (skipped), value calculated using timer frequency..
+16.00 BogoMIPS (lpj=32000)
+[    0.000817] pid_max: default: 32768 minimum: 301
+[    0.000931] LSM: Security Framework initializing
+[    0.000958] Yama: disabled by default; enable with sysctl kernel.yama.*
+[    0.001045] AppArmor: AppArmor initialized
+[    0.001052] TOMOYO Linux initialized
+[    0.001118] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.001130] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.002767] rcu: Hierarchical SRCU implementation.
+[    0.004880] Remapping and enabling EFI services.
+[    0.005248] smp: Bringing up secondary CPUs ...
+[    0.013569] Detected VIPT I-cache on CPU1
+[    0.013600] GICv3: CPU1: found redistributor 1 region 0:0x00000000388a0000
+[    0.013647] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.022006] Detected VIPT I-cache on CPU2
+[    0.022026] GICv3: CPU2: found redistributor 2 region 0:0x00000000388c0000
+[    0.022053] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    0.030399] Detected VIPT I-cache on CPU3
+[    0.030418] GICv3: CPU3: found redistributor 3 region 0:0x00000000388e0000
+[    0.030446] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    0.030518] smp: Brought up 1 node, 4 CPUs
+[    0.030528] SMP: Total of 4 processors activated.
+[    0.030533] CPU features: detected: 32-bit EL0 Support
+[    0.030538] CPU features: detected: CRC32 instructions
+[    0.030543] CPU features: detected: 32-bit EL1 Support
+[    0.039309] CPU: All CPU(s) started at EL2
+[    0.039335] alternatives: patching kernel code
+[    0.111914] node 0 deferred pages initialised in 68ms
+[    0.113216] devtmpfs: initialized
+[    0.120889] Registered cp15_barrier emulation handler
+[    0.120906] Registered setend emulation handler
+[    0.120914] KASLR disabled due to lack of seed
+[    0.121087] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns:
+ 7645041785100000 ns
+[    0.121108] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.123768] pinctrl core: initialized pinctrl subsystem
+[    0.124567] SMBIOS 3.0 present.
+[    0.124587] DMI: Unknown Unknown Product/Unknown Product, BIOS 2021.04+fio+gfac7c7dfe6
+10/08/2021
+[    0.125071] NET: Registered protocol family 16
+[    0.126843] DMA: preallocated 256 KiB GFP_KERNEL pool for atomic allocations
+[    0.126999] DMA: preallocated 256 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.127212] DMA: preallocated 256 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.127267] audit: initializing netlink subsys (disabled)
+[    0.127428] audit: type=2000 audit(0.124:1): state=initialized audit_enabled=0 res=1
+[    0.128610] thermal_sys: Registered thermal governor 'fair_share'
+[    0.128616] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.128620] thermal_sys: Registered thermal governor 'step_wise'
+[    0.128623] thermal_sys: Registered thermal governor 'user_space'
+[    0.128626] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.128826] cpuidle: using governor ladder
+[    0.128846] cpuidle: using governor menu
+[    0.128984] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.129080] ASID allocator initialised with 65536 entries
+[    0.129431] Serial: AMBA PL011 UART driver
+[    0.163181] debugfs: Directory 'dummy-iomuxc-gpr@30340000' with parent 'regmap' already
+ present!
+[    0.163499] imx8mm-pinctrl 30330000.pinctrl: initialized IMX pinctrl driver
+[    0.171840] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.171851] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.171855] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.171862] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.730547] ACPI: Interpreter disabled.
+[    0.730910] iommu: Default domain type: Translated
+[    0.731153] vgaarb: loaded
+[    0.731453] EDAC MC: Ver: 3.0.0
+[    0.732154] Registered efivars operations
+[    0.733041] NetLabel: Initializing
+[    0.733045] NetLabel:  domain hash size = 128
+[    0.733048] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.733109] NetLabel:  unlabeled traffic allowed by default
+[    0.733360] clocksource: Switched to clocksource arch_sys_counter
+[    0.792473] VFS: Disk quotas dquot_6.6.0
+[    0.792542] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.793178] AppArmor: AppArmor Filesystem Enabled
+[    0.793539] pnp: PnP ACPI: disabled
+[    0.799933] NET: Registered protocol family 2
+[    0.800061] IP idents hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.801160] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes, l
+inear)
+[    0.801205] TCP established hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.801419] TCP bind hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    0.801637] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.801756] UDP hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    0.801802] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    0.802003] NET: Registered protocol family 1
+[    0.802030] NET: Registered protocol family 44
+[    0.802042] PCI: CLS 0 bytes, default 64
+[    0.802244] Trying to unpack rootfs image as initramfs...
+[    2.043433] Freeing initrd memory: 26540K
+[    2.044199] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    2.044956] kvm [1]: IPA Size Limit: 40 bits
+[    2.046670] kvm [1]: GICv3: no GICV resource entry
+[    2.046675] kvm [1]: disabling GICv2 emulation
+[    2.046694] kvm [1]: GIC system register CPU interface enabled
+[    2.046774] kvm [1]: vgic interrupt IRQ9
+[    2.046897] kvm [1]: Hyp mode initialized successfully
+[    2.048353] Initialise system trusted keyrings
+[    2.048394] Key type blacklist registered
+[    2.048596] workingset: timestamp_bits=42 max_order=19 bucket_order=0
+[    2.053623] zbud: loaded
+[    2.054257] integrity: Platform Keyring initialized
+[    2.054267] Key type asymmetric registered
+[    2.054271] Asymmetric key parser 'x509' registered
+[    2.054304] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    2.054509] io scheduler mq-deadline registered
+[    2.061894] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    2.075272] SoC: i.MX8MM revision 1.0
+[    2.077933] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    2.080096] Serial: AMBA driver
+[    2.080620] 30860000.serial: ttymxc0 at MMIO 0x30860000 (irq = 47, base_baud = 5000000)
+ is a IMX
+[    2.081532] 30880000.serial: ttymxc2 at MMIO 0x30880000 (irq = 48, base_baud = 5000000)
+ is a IMX
+[    2.082202] 30890000.serial: ttymxc1 at MMIO 0x30890000 (irq = 49, base_baud = 1500000)
+ is a IMX
+[    2.082220] imx-uart 30890000.serial: Console IMX rounded baud rate from 114286 to 1143
+00
+[    2.091165] printk: console [ttymxc1] enabled
+[    2.092323] msm_serial: driver initialized
+[    2.095131] mousedev: PS/2 mouse device common for all mice
+[    2.097583] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.098021] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    2.099791] NET: Registered protocol family 10
+[    2.131491] Segment Routing with IPv6
+[    2.131568] mip6: Mobile IPv6
+[    2.131578] NET: Registered protocol family 17
+[    2.131670] mpls_gso: MPLS GSO support
+[    2.132028] registered taskstats version 1
+[    2.132044] Loading compiled-in X.509 certificates
+[    2.259080] Loaded X.509 cert 'Debian Secure Boot CA: 6ccece7e4c6c0d1f6149f3dd27dfcc5cb
+b419ea1'
+[    2.259140] Loaded X.509 cert 'Debian Secure Boot Signer 2021 - linux: 4b6ef5abca669825
+178e052c84667ccbc0531f8c'
+[    2.259258] zswap: loaded using pool lzo/zbud
+[    2.259869] Key type ._fscrypt registered
+[    2.259874] Key type .fscrypt registered
+[    2.259878] Key type fscrypt-provisioning registered
+[    2.260026] AppArmor: AppArmor sha1 policy hashing enabled
+[    2.287046] Freeing unused kernel memory: 5440K
+[    2.337906] Checked W+X mappings: passed, no W+X pages found
+[    2.337936] Run /init as init process
+[    2.337942]   with arguments:
+[    2.337946]     /init
+[    2.337949]   with environment:
+[    2.337952]     HOME=/
+[    2.337955]     TERM=linux
+[    2.337958]     BOOT_IMAGE=/boot/vmlinuz-5.10.0-8-arm64
+[    2.734486] i2c i2c-0: IMX I2C adapter registered
+[    2.736293] i2c i2c-1: IMX I2C adapter registered
+[    2.738397] i2c i2c-2: IMX I2C adapter registered
+[    2.741871] sdhci: Secure Digital Host Controller Interface driver
+[    2.741881] sdhci: Copyright(c) Pierre Ossman
+[    2.751502] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.760240] mmc0: CQHCI version 5.10
+[    2.760344] sdhci-esdhc-imx 30b40000.mmc: allocated mmc-pwrseq
+[    2.761800] mmc1: CQHCI version 5.10
+[    2.761871] sdhci-esdhc-imx 30b50000.mmc: Got CD GPIO
+[    2.762178] pps_core: LinuxPPS API ver. 1 registered
+[    2.762184] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giome
+tti@linux.it>
+[    2.763977] mmc2: CQHCI version 5.10
+[    2.767387] PTP clock support registered
+[    2.783160] usb_phy_generic usbphynop1: supply vcc not found, using dummy regulator
+[    2.785613] libphy: Fixed MDIO Bus: probed
+[    2.789495] usb_phy_generic usbphynop2: supply vcc not found, using dummy regulator
+[    2.793683] mmc0: SDHCI controller on 30b40000.mmc [30b40000.mmc] using ADMA
+[    2.797330] pps pps0: new PPS source ptp0
+[    2.797411] mmc2: SDHCI controller on 30b60000.mmc [30b60000.mmc] using ADMA
+[    2.808144] mmc1: SDHCI controller on 30b50000.mmc [30b50000.mmc] using ADMA
+[    2.816193] libphy: fec_enet_mii_bus: probed
+[    2.830797] usbcore: registered new interface driver usbfs
+[    2.830844] usbcore: registered new interface driver hub
+[    2.830897] usbcore: registered new device driver usb
+[    2.834188] fec 30be0000.ethernet eth0: registered PHC device 0
+[    2.840688] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.844397] mmc0: queuing unknown CIS tuple 0x01 (3 bytes)
+[    2.854338] mmc0: queuing unknown CIS tuple 0x1a (5 bytes)
+[    2.857979] mmc0: queuing unknown CIS tuple 0x1b (8 bytes)
+[    2.858741] mmc0: queuing unknown CIS tuple 0x14 (0 bytes)
+[    2.867561] imx_usb 32e40000.usb: deferred probe timeout, ignoring dependency
+[    2.867587] imx_usb: probe of 32e40000.usb failed with error -110
+[    2.888568] mmc0: queuing unknown CIS tuple 0x80 (1 bytes)
+[    2.888629] mmc0: queuing unknown CIS tuple 0x81 (1 bytes)
+[    2.888680] mmc0: queuing unknown CIS tuple 0x82 (1 bytes)
+[    2.888718] mmc0: new ultra high speed SDR104 SDIO card at address 0001
+[    2.892326] mmc2: Command Queue Engine enabled
+[    2.892359] mmc2: new HS400 Enhanced strobe MMC card at address 0001
+[    2.893399] mmcblk2: mmc2:0001 DG4016 14.7 GiB
+[    2.893612] mmcblk2boot0: mmc2:0001 DG4016 partition 1 4.00 MiB
+[    2.893798] mmcblk2boot1: mmc2:0001 DG4016 partition 2 4.00 MiB
+[    2.894345] mmcblk2rpmb: mmc2:0001 DG4016 partition 3 4.00 MiB, chardev (244:0)
+[    2.897942]  mmcblk2: p1 p2
+[    2.923507] random: fast init done
+[    3.164220] EXT4-fs (mmcblk2p2): mounted filesystem with ordered data mode. Opts: (null
+)
+[    3.333219] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist
+.
+[    3.431034] systemd[1]: System time before build time, advancing clock.
+[    3.453092] systemd[1]: Inserted module 'autofs4'
+[    3.498424] systemd[1]: systemd 247.3-6 running in system mode. (+PAM +AUDIT +SELINUX +
+IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +ZSTD +S
+ECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    3.499149] systemd[1]: Detected architecture arm64.
+[    3.500152] systemd[1]: Set hostname to <imx8mm-lpddr4-evk-ebbr>.
+[    3.915704] systemd[1]: Queued start job for default target Graphical Interface.
+[    3.916770] random: systemd: uninitialized urandom read (16 bytes read)
+[    3.919481] systemd[1]: Created slice system-getty.slice.
+[    3.919820] random: systemd: uninitialized urandom read (16 bytes read)
+[    3.920886] systemd[1]: Created slice system-modprobe.slice.
+[    3.920967] random: systemd: uninitialized urandom read (16 bytes read)
+[    3.922414] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[    3.923377] systemd[1]: Created slice User and Session Slice.
+[    3.923720] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    3.923949] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    3.924683] systemd[1]: Set up automount Arbitrary Executable File Formats File System
+Automount Point.
+[    3.924860] systemd[1]: Reached target Local Encrypted Volumes.
+[    3.925037] systemd[1]: Reached target Paths.
+[    3.925126] systemd[1]: Reached target Remote File Systems.
+[    3.925194] systemd[1]: Reached target Slices.
+[    3.925287] systemd[1]: Reached target Swap.
+[    3.926012] systemd[1]: Listening on Syslog Socket.
+[    3.926419] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    3.926696] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    3.927368] systemd[1]: Listening on Journal Audit Socket.
+[    3.927771] systemd[1]: Listening on Journal Socket (/dev/log).
+[    3.928260] systemd[1]: Listening on Journal Socket.
+[    3.929329] systemd[1]: Listening on udev Control Socket.
+[    3.929899] systemd[1]: Listening on udev Kernel Socket.
+[    3.933298] systemd[1]: Mounting Huge Pages File System...
+[    3.937325] systemd[1]: Mounting POSIX Message Queue File System...
+[    3.941731] systemd[1]: Mounting Kernel Debug File System...
+[    3.945980] systemd[1]: Mounting Kernel Trace File System...
+[    3.951519] systemd[1]: Starting Create list of static device nodes for the current ker
+nel...
+[    3.956182] systemd[1]: Starting Load Kernel Module configfs...
+[    3.960589] systemd[1]: Starting Load Kernel Module drm...
+[    3.965187] systemd[1]: Starting Load Kernel Module fuse...
+[    3.966780] systemd[1]: Condition check resulted in Set Up Additional Binary Formats be
+ing skipped.
+[    3.967008] systemd[1]: Condition check resulted in File System Check on Root Device be
+ing skipped.
+[    3.974248] systemd[1]: Starting Journal Service...
+[    3.982275] systemd[1]: Starting Load Kernel Modules...
+[    3.986433] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    3.990574] systemd[1]: Starting Coldplug All udev Devices...
+[    3.997297] fuse: init (API version 7.32)
+[    3.998407] systemd[1]: Mounted Huge Pages File System.
+[    3.999038] systemd[1]: Mounted POSIX Message Queue File System.
+[    3.999645] systemd[1]: Mounted Kernel Debug File System.
+[    4.000343] systemd[1]: Mounted Kernel Trace File System.
+[    4.002291] systemd[1]: Finished Create list of static device nodes for the current ker
+nel.
+[    4.004139] systemd[1]: modprobe@configfs.service: Succeeded.
+[    4.005588] systemd[1]: Finished Load Kernel Module configfs.
+[    4.007386] systemd[1]: modprobe@fuse.service: Succeeded.
+[    4.008757] systemd[1]: Finished Load Kernel Module fuse.
+[    4.013893] systemd[1]: Mounting FUSE Control File System...
+[    4.018911] systemd[1]: Mounting Kernel Configuration File System...
+[    4.036142] systemd[1]: Mounted FUSE Control File System.
+[    4.036909] systemd[1]: Mounted Kernel Configuration File System.
+[    4.041779] EXT4-fs (mmcblk2p2): re-mounted. Opts: errors=remount-ro
+[    4.042240] systemd[1]: modprobe@drm.service: Succeeded.
+[    4.043476] systemd[1]: Finished Load Kernel Module drm.
+[    4.049557] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    4.051489] systemd[1]: Finished Load Kernel Modules.
+[    4.053170] systemd[1]: Condition check resulted in Rebuild Hardware Database being ski
+pped.
+[    4.053433] systemd[1]: Condition check resulted in Platform Persistent Storage Archiva
+l being skipped.
+[    4.057142] systemd[1]: Starting Load/Save Random Seed...
+[    4.061317] systemd[1]: Starting Apply Kernel Variables...
+[    4.066729] systemd[1]: Starting Create System Users...
+[    4.120789] systemd[1]: Finished Apply Kernel Variables.
+[    4.144330] systemd[1]: Started Journal Service.
+[    4.176016] systemd-journald[223]: Received client request to flush runtime journal.
+[    4.506474] optee: probing for conduit method.
+[    4.506507] optee: revision 3.10 (0c95ab1e)
+[    4.525716] optee: dynamic shared memory is enabled
+[    4.526172] optee: initialized driver
+[    4.666967] caam 30900000.crypto: RNG4 SH0 was previously instantiated without predicti
+on resistance. Tearing it down
+[    4.666989] caam 30900000.crypto: Deinstantiated RNG4 SH0
+[    4.667005] caam 30900000.crypto: Instantiated RNG4 SH0
+[    4.667010] caam 30900000.crypto: RNG4 SH1 was previously instantiated without predicti
+on resistance. Tearing it down
+[    4.667022] caam 30900000.crypto: Deinstantiated RNG4 SH1
+[    4.727182] caam 30900000.crypto: Instantiated RNG4 SH1
+[    4.747486] caam 30900000.crypto: device ID = 0x0a16040100000000 (Era 9)
+[    4.747500] caam 30900000.crypto: job rings = 2, qi = 0
+[    4.853419] spi-nor spi0.0: n25q256ax1 (32768 Kbytes)
+[    4.907212] adv7511 1-003d: supply avdd not found, using dummy regulator
+[    4.907395] adv7511 1-003d: supply dvdd not found, using dummy regulator
+[    4.907443] adv7511 1-003d: supply pvdd not found, using dummy regulator
+[    4.907487] adv7511 1-003d: supply a2vdd not found, using dummy regulator
+[    4.907531] adv7511 1-003d: supply v3p3 not found, using dummy regulator
+[    4.907577] adv7511 1-003d: supply v1p2 not found, using dummy regulator
+[    5.027173] cryptd: max_cpu_qlen set to 1000
+[    5.081951] FAT-fs (mmcblk2p1): Volume was not properly unmounted. Some data may be cor
+rupt. Please run fsck.
+[    5.325511] alg: No test for authenc(hmac(sha224),ecb(cipher_null)) (authenc-hmac-sha22
+4-ecb-cipher_null-caam)
+[    5.331810] alg: No test for authenc(hmac(sha256),ecb(cipher_null)) (authenc-hmac-sha25
+6-ecb-cipher_null-caam)
+[    5.341492] alg: No test for authenc(hmac(md5),cbc(aes)) (authenc-hmac-md5-cbc-aes-caam
+)
+[    5.347790] alg: No test for echainiv(authenc(hmac(md5),cbc(aes))) (echainiv-authenc-hm
+ac-md5-cbc-aes-caam)
+[    5.377980] alg: No test for echainiv(authenc(hmac(sha1),cbc(aes))) (echainiv-authenc-h
+mac-sha1-cbc-aes-caam)
+[    5.389513] alg: No test for authenc(hmac(sha224),cbc(aes)) (authenc-hmac-sha224-cbc-ae
+s-caam)
+[    5.401495] alg: No test for echainiv(authenc(hmac(sha224),cbc(aes))) (echainiv-authenc
+-hmac-sha224-cbc-aes-caam)
+[    5.429472] alg: No test for echainiv(authenc(hmac(sha256),cbc(aes))) (echainiv-authenc
+-hmac-sha256-cbc-aes-caam)
+[    5.441526] alg: No test for authenc(hmac(md5),cbc(des3_ede)) (authenc-hmac-md5-cbc-des
+3_ede-caam)
+[    5.457406] alg: No test for echainiv(authenc(hmac(md5),cbc(des3_ede))) (echainiv-authe
+nc-hmac-md5-cbc-des3_ede-caam)
+[    5.481470] alg: No test for echainiv(authenc(hmac(sha1),cbc(des3_ede))) (echainiv-auth
+enc-hmac-sha1-cbc-des3_ede-caam)
+[    5.509514] alg: No test for echainiv(authenc(hmac(sha224),cbc(des3_ede))) (echainiv-au
+thenc-hmac-sha224-cbc-des3_ede-caam)
+[    5.537518] alg: No test for echainiv(authenc(hmac(sha256),cbc(des3_ede))) (echainiv-au
+thenc-hmac-sha256-cbc-des3_ede-caam)
+[    5.553506] alg: No test for authenc(hmac(md5),cbc(des)) (authenc-hmac-md5-cbc-des-caam
+)
+[    5.569494] alg: No test for echainiv(authenc(hmac(md5),cbc(des))) (echainiv-authenc-hm
+ac-md5-cbc-des-caam)
+[    5.595194] audit: type=1400 audit(1626197366.160:2): apparmor="STATUS" operation="prof
+ile_load" profile="unconfined" name="nvidia_modprobe" pid=332 comm="apparmor_parser"
+[    5.597493] alg: No test for echainiv(authenc(hmac(sha1),cbc(des))) (echainiv-authenc-h
+mac-sha1-cbc-des-caam)
+[    5.600914] audit: type=1400 audit(1626197366.164:3): apparmor="STATUS" operation="prof
+ile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=332 comm="apparmor_parser"
+[    5.606566] alg: No test for echainiv(authenc(hmac(sha224),cbc(des))) (echainiv-authenc
+-hmac-sha224-cbc-des-caam)
+[    5.607561] alg: No test for echainiv(authenc(hmac(sha256),cbc(des))) (echainiv-authenc
+-hmac-sha256-cbc-des-caam)
+[    5.607696] alg: No test for authenc(hmac(md5),rfc3686(ctr(aes))) (authenc-hmac-md5-rfc
+3686-ctr-aes-caam)
+[    5.607805] alg: No test for seqiv(authenc(hmac(md5),rfc3686(ctr(aes)))) (seqiv-authenc
+-hmac-md5-rfc3686-ctr-aes-caam)
+[    5.608004] alg: No test for seqiv(authenc(hmac(sha1),rfc3686(ctr(aes)))) (seqiv-authen
+c-hmac-sha1-rfc3686-ctr-aes-caam)
+[    5.608129] alg: No test for authenc(hmac(sha224),rfc3686(ctr(aes))) (authenc-hmac-sha2
+24-rfc3686-ctr-aes-caam)
+[    5.608231] alg: No test for seqiv(authenc(hmac(sha224),rfc3686(ctr(aes)))) (seqiv-auth
+enc-hmac-sha224-rfc3686-ctr-aes-caam)
+[    5.608426] alg: No test for seqiv(authenc(hmac(sha256),rfc3686(ctr(aes)))) (seqiv-auth
+enc-hmac-sha256-rfc3686-ctr-aes-caam)
+[    5.608447] caam algorithms registered in /proc/crypto
+[    5.615124] audit: type=1400 audit(1626197366.180:4): apparmor="STATUS" operation="prof
+ile_load" profile="unconfined" name="lsb_release" pid=331 comm="apparmor_parser"
+[    5.682978] audit: type=1400 audit(1626197366.248:5): apparmor="STATUS" operation="prof
+ile_load" profile="unconfined" name="/usr/bin/man" pid=333 comm="apparmor_parser"
+[    5.685793] audit: type=1400 audit(1626197366.252:6): apparmor="STATUS" operation="prof
+ile_load" profile="unconfined" name="man_filter" pid=333 comm="apparmor_parser"
+[    5.689758] audit: type=1400 audit(1626197366.256:7): apparmor="STATUS" operation="prof
+ile_load" profile="unconfined" name="man_groff" pid=333 comm="apparmor_parser"
+[    5.933927] Qualcomm Atheros AR8031/AR8033 30be0000.ethernet-1:00: attached PHY driver
+[Qualcomm Atheros AR8031/AR8033] (mii_bus:phy_addr=30be0000.ethernet-1:00, irq=POLL)
+[    5.983412] caam 30900000.crypto: caam pkc algorithms registered in /proc/crypto
+[    5.983434] caam 30900000.crypto: registering rng-caam
+[    6.043725] random: crng init done
+[    6.043742] random: 7 urandom warning(s) missed due to ratelimiting
+[   10.014244] fec 30be0000.ethernet eth0: Link is Up - 1Gbps/Full - flow control rx/tx
+[   10.014285] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   33.757383] VSD_3V3: disabling
+root@imx8mm-lpddr4-evk-ebbr:~# lspci -vvv
+root@imx8mm-lpddr4-evk-ebbr:~# lscpu
+Architecture:                    aarch64
+CPU op-mode(s):                  32-bit, 64-bit
+Byte Order:                      Little Endian
+CPU(s):                          4
+On-line CPU(s) list:             0-3
+Thread(s) per core:              1
+Core(s) per socket:              4
+Socket(s):                       1
+NUMA node(s):                    1
+Vendor ID:                       ARM
+Model:                           4
+Model name:                      Cortex-A53
+Stepping:                        r0p4
+BogoMIPS:                        16.00
+NUMA node0 CPU(s):               0-3
+Vulnerability Itlb multihit:     Not affected
+Vulnerability L1tf:              Not affected
+Vulnerability Mds:               Not affected
+Vulnerability Meltdown:          Not affected
+Vulnerability Spec store bypass: Not affected
+Vulnerability Spectre v1:        Mitigation; __user pointer sanitization
+Vulnerability Spectre v2:        Not affected
+Vulnerability Srbds:             Not affected
+Vulnerability Tsx async abort:   Not affected
+Flags:                           fp asimd evtstrm aes pmull sha1 sha2 crc32 cpui
+                                 d
+root@imx8mm-lpddr4-evk-ebbr:~# lsblk
+NAME         MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+mmcblk2      179:0    0 14.7G  0 disk
+^\^@mmcblk2p1  179:1    0  100M  0 part /boot/efi
+^T^@mmcblk2p2  179:2    0 14.6G  0 part /
+mmcblk2boot0 179:256  0    4M  1 disk
+mmcblk2boot1 179:512  0    4M  1 disk
+root@imx8mm-lpddr4-evk-ebbr:~# dmidecode
+# dmidecode 3.3
+Getting SMBIOS data from sysfs.
+SMBIOS 3.0 present.
+7 structures occupying 264 bytes.
+Table at 0xB9CBE020.
+
+Handle 0x0000, DMI type 0, 24 bytes
+BIOS Information
+        Vendor: U-Boot
+        Version: 2021.04+fio+gfac7c7dfe6
+        Release Date: 10/08/2021
+        ROM Size: 64 kB
+        Characteristics:
+                PCI is supported
+                BIOS is upgradeable
+                Selectable boot is supported
+                Targeted content distribution is supported
+                UEFI is supported
+        BIOS Revision: 21.4
+
+Handle 0x0001, DMI type 1, 27 bytes
+System Information
+        Manufacturer: Unknown
+        Product Name: Unknown Product
+        Version: Not Specified
+        Serial Number: Not Specified
+        UUID: Not Settable
+        Wake-up Type: Reserved
+        SKU Number: Not Specified
+        Family: Not Specified
+
+Handle 0x0002, DMI type 2, 14 bytes
+Base Board Information
+        Manufacturer: Unknown
+        Product Name: Unknown Product
+        Version: Not Specified
+        Serial Number: Not Specified
+        Asset Tag: Not Specified
+        Features:
+                Board is a hosting board
+        Location In Chassis: Not Specified
+        Chassis Handle: 0x0000
+        Type: Motherboard
+
+Handle 0x0003, DMI type 3, 21 bytes
+Chassis Information
+        Manufacturer: Unknown
+        Type: Desktop
+        Lock: Not Present
+        Version: Not Specified
+        Serial Number: Not Specified
+        Asset Tag: Not Specified
+        Boot-up State: Safe
+        Power Supply State: Safe
+        Thermal State: Safe
+        Security Status: None
+        OEM Information: 0x00000000
+        Height: Unspecified
+        Number Of Power Cords: Unspecified
+        Contained Elements: 0
+
+Handle 0x0004, DMI type 4, 48 bytes
+Processor Information
+        Socket Designation: Not Specified
+        Type: Central Processor
+        Family: Unknown
+        Manufacturer: Unknown
+        ID: 00 00 00 00 00 00 00 00
+        Version: Unknown
+        Voltage: Unknown
+        External Clock: Unknown
+        Max Speed: Unknown
+        Current Speed: Unknown
+        Status: Unpopulated
+        Upgrade: None
+        L1 Cache Handle: Not Provided
+        L2 Cache Handle: Not Provided
+        L3 Cache Handle: Not Provided
+        Serial Number: Not Specified
+        Asset Tag: Not Specified
+        Part Number: Not Specified
+        Characteristics: None
+
+Handle 0x0005, DMI type 32, 11 bytes
+System Boot Information
+        Status: No errors detected
+
+Handle 0x0006, DMI type 127, 4 bytes
+End Of Table
+
+root@imx8mm-lpddr4-evk-ebbr:~# uname -a
+Linux imx8mm-lpddr4-evk-ebbr 5.10.0-8-arm64 #1 SMP Debian 5.10.46-5 (2021-09-23) aarch64 G
+NU/Linux
+root@imx8mm-lpddr4-evk-ebbr:~# efibootmgr
+No BootOrder is set; firmware will attempt recovery
+root@imx8mm-lpddr4-evk-ebbr:~# tar cfz sys-firmware.tar.gz /sys/firmware
+tar: Removing leading `/' from member names
+tar: /sys/firmware/efi/fw_platform_size: File shrank by 4093 bytes; padding with zeros
+tar: /sys/firmware/efi/systab: File shrank by 4078 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/fw_resource_count_max: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/fw_resource_count: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/entries/entry0/fw_class: File shrank by 4059 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/entries/entry0/lowest_supported_fw_version: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/entries/entry0/last_attempt_version: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/entries/entry0/last_attempt_status: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/entries/entry0/fw_type: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/entries/entry0/fw_version: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/entries/entry0/capsule_flags: File shrank by 4092 bytes; padding with zeros
+tar: /sys/firmware/efi/esrt/fw_resource_version: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/1-0/handle: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/1-0/length: File shrank by 4093 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/1-0/position: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/1-0/type: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/1-0/instance: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/127-0/handle: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/127-0/length: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/127-0/position: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/127-0/type: File shrank by 4092 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/127-0/instance: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/4-0/handle: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/4-0/length: File shrank by 4093 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/4-0/position: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/4-0/type: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/4-0/instance: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/0-0/handle: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/0-0/length: File shrank by 4093 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/0-0/position: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/0-0/type: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/0-0/instance: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/3-0/handle: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/3-0/length: File shrank by 4093 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/3-0/position: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/3-0/type: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/3-0/instance: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/32-0/handle: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/32-0/length: File shrank by 4093 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/32-0/position: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/32-0/type: File shrank by 4093 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/32-0/instance: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/2-0/handle: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/2-0/length: File shrank by 4093 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/2-0/position: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/2-0/type: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/dmi/entries/2-0/instance: File shrank by 4094 bytes; padding with zeros
+tar: /sys/firmware/fdt: File shrank by 43754 bytes; padding with zeros
+
+dmesg
+lspci -vvv
+lscpu
+lsblk
+dmidecode
+uname -a
+efibootmgr
+tar cfz sys-firmware.tar.gz /sys/firmware
