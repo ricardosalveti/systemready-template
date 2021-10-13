@@ -4,7 +4,7 @@ General information
 - System name: FSL i.MX8MM LPDDR4 EVK with QCA WIFI revC board
 - Prepared by: Ricardo Salveti
 - E-mail: ricardo@foundries.io
-- Date: 08/Oct/22
+- Date: 08/Oct/21
 
 System Information
 ------------------
