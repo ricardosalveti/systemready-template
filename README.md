@@ -186,7 +186,7 @@ FS2:\> efi/boot/app/capsuleapp.efi capsule.bin
 Create a directory for each Linux distro used for testing.
 
 Install the OS to a disk, and boot it.
-Collect the installation and OS boot logs and save in single text file.
+Collect the installation and OS boot logs and save in single `console.log` text file.
 The install log must begin when the platform is released from reset and
 must include:
 
@@ -206,7 +206,7 @@ efibootmgr
 tar cfz sys-firmware.tar.gz /sys/firmware
 ```
 
-Copy the resulting sys-firmware.tar.gz into the results directory.
+Copy the resulting `sys-firmware.tar.gz` into the results directory.
 
 #### `./os-logs/esxi/`
 Install VMWare ESXi to a disk, and boot it.
