@@ -1,6 +1,6 @@
 General information
 -------------------
-- Arm SystemReady Band: SR|ES|IR|LS
+- Arm SystemReady Band: IR
 - System name:
 - Prepared by:
 - E-mail:
@@ -25,8 +25,8 @@ Test Logs and Results
 
 - Test Logs collected
 [ ] ACS - SCT
-[ ] ACS - (S)BSA - UEFI
-[ ] ACS - (S)BSA - Linux
+[ ] ACS - BSA - UEFI
+[ ] ACS - BSA - Linux
 [ ] ACS - FWTS
 [ ] ACS - Linux boot log
 [ ] ACS - Linux dumps
