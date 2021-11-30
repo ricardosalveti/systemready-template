@@ -207,7 +207,9 @@ After collecting the results the directory tree should look like this:
 ├── docs/
 ├── fw/
 │   ├── readme.txt
-│   └── u-boot-sniff.log
+│   ├── u-boot-sniff.log
+│   ├── uefi-sniff.log
+│   └── capsule-update.log
 ├── manual-results/
 ├── os-logs/
 │   ├── linux-distro1-version/
