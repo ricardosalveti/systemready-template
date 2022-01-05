@@ -78,6 +78,7 @@ Run the following commands at U-Boot prompt and attach the logs:
     u-boot=> efidebug memmap
     u-boot=> efidebug tables
     u-boot=> efidebug boot dump
+    u-boot=> efidebug capsule esrt
     u-boot=> bootefi hello ${fdtcontroladdr}
     u-boot=> bootefi selftest ${fdtcontroladdr}
 
@@ -135,17 +136,20 @@ must include:
 - Output of following commands from Linux shell:
 
 ```
-dmesg
-lspci -vvv
-lscpu
-lsblk
-dmidecode
-uname -a
-efibootmgr
-tar cfz sys-firmware.tar.gz /sys/firmware
+# dmesg
+# lspci -vvv
+# lscpu
+# lsblk
+# dmidecode
+# uname -a
+# efibootmgr
+# cp -r /sys/firmware ~/
+# tar czf ~/sys-firmware.tar.gz ~/firmware
 ```
 
-Copy the resulting `sys-firmware.tar.gz` into the results directory.
+Make sure to use the intermediate copy step to capture the `/sys/firmware`
+folder contents properly, then copy the resulting `sys-firmware.tar.gz` into the
+results directory.
 
 ## SystemReady IR results example
 
