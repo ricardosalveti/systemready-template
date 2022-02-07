@@ -142,6 +142,7 @@ must include:
 # lsblk
 # dmidecode
 # uname -a
+# cat /etc/os-release
 # efibootmgr
 # cp -r /sys/firmware ~/
 # tar czf ~/sys-firmware.tar.gz ~/firmware
