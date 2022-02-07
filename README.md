@@ -96,8 +96,6 @@ execute.
     Shell> dh -d -v
     Shell> memmap
     Shell> smbiosview
-    Shell> CapsuleApp.efi -P
-    Shell> CapsuleApp.efi -E
 
 #### `./fw/capsule-update.log`
 Demonstrate that `UpdateCapsule()` works by capturing a log of using
@@ -117,7 +115,9 @@ The U-Boot console log should now show a different version of firmware.
 
 ```
 Shell> fs2:\
-FS2:\> efi/boot/app/capsuleapp.efi capsule.bin
+FS2:\> EFI/BOOT/app/CapsuleApp.efi -P
+FS2:\> EFI/BOOT/app/CapsuleApp.efi -E
+FS2:\> EFI/BOOT/app/CapsuleApp.efi capsule.bin
 ```
 
 ### `./os-logs/`
