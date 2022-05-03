@@ -31,4 +31,5 @@ Test Logs and Results
 [ ] ACS - Linux boot log
 [ ] ACS - Linux dumps
 [ ] ACS - UEFI Shell dumps
+[ ] ACS - Capsule Update
 
