@@ -6,6 +6,9 @@ SystemReady IR certification.
 
 [systemready-es-sr-template]: https://gitlab.arm.com/systemready/systemready-es-sr-template
 
+## Branches
+For IR 1.1 certification, git branch `ir1` of this template should be used.
+
 ## Verification script
 A `check-sr-results.py` verification script is available in the [SystemReady
 scripts] repository, which can verify if a directory structure is conforming to
