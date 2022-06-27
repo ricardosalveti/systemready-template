@@ -1,0 +1,20 @@
+For SystemReady IR
+
+    Fedora IoT - https://getfedora.org/en/iot/download/
+        - Alternatively, Fedora Server - https://getfedora.org/en/server/download/
+        - If Server does not work, Fedora Workstation live - https://getfedora.org/en/workstation/download/ (*)
+        - Alternatively, Fedora Rawhide nightly build - https://openqa.fedoraproject.org/nightlies.html
+
+    Ubuntu Server LTS - https://ubuntu.com/download/server/arm
+        - If LTS doesn’t work, Ubuntu Server interim release - https://ubuntu.com/download/server/arm
+        - If interim release doesn’t work, Ubuntu daily build - https://cdimage.ubuntu.com/daily-live/current/
+
+    Debian - https://www.debian.org/releases/  -> Stable -> installation information
+        - Alternatively, Debian testing weekly build - https://cdimage.debian.org/cdimage/weekly-builds/
+        - Alternatively, Debian daily image - https://d-i.debian.org/daily-images/
+
+    OpenSUSE Leap - https://get.opensuse.org/leap/
+        - If OpenSUSE Leap doesn’t work, OpenSUSE Tumbleweed - https://get.opensuse.org/tumbleweed/
+
+(*): Booting a live distro is informative only for certification, except if it
+     can be used to install the OS.
