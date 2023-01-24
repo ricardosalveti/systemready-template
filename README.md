@@ -102,29 +102,77 @@ execute.
 
 #### `./fw/capsule-update.log`
 Demonstrate that `UpdateCapsule()` works by capturing a log of using
-CapsuleApp.efi from the UEFI shell to install a different version of
-firmware.
+`CapsuleApp.efi` from the UEFI shell performing several attempts at installing a
+different version of firmware.
+
+Using the `capsule-tool.py` from the [SystemReady scripts], generate an unsigned
+capsule and a tampered capsule from a signed capsule as follows:
+
+```
+$ capsule-tool.py --de-authenticate --output unauth.bin capsule1.bin
+$ capsule-tool.py --tamper --output tampered.bin capsule1.bin
+```
 
 Start with a copy of the ACS image on an SD card or USB drive and put
-a copy of the firmware capsule into the `BOOT` volume.
+a copy of the three capsules into the `BOOT` volume.
+Setup the system in its original state.
 Begin capture before releasing board from reset so that the initial
 firmware log messages are captured.
 Boot the ACS image, choose the default Grub option, and then press a
 key to break out of running the ACS tests.
-From the UEFI shell, use CapsuleApp.efi to install the new version
-of firmware.
-CapsuleApp.efi will cause the board to reboot after installing.
+From the UEFI shell, use `CapsuleApp.efi` to attempt installing a new version
+of the firmware with an unauthenticated capsule and with a tampered capsule.
+Both attempts should fail and the system should not reboot:
+
+```
+Shell> fs2:\
+FS2:\> EFI/BOOT/app/CapsuleApp.efi -D unauth.bin
+FS2:\> EFI/BOOT/app/CapsuleApp.efi unauth.bin
+FS2:\> EFI/BOOT/app/CapsuleApp.efi -D tampered.bin
+FS2:\> EFI/BOOT/app/CapsuleApp.efi tampered.bin
+```
+
+Then use `CapsuleApp.efi` to install the new version of firmware with a signed
+capsule.
+`CapsuleApp.efi` should cause the board to reboot after installing.
 The U-Boot console log should now show a different version of firmware.
 
 ```
 Shell> fs2:\
-FS2:\> EFI/BOOT/app/CapsuleApp.efi -P
-FS2:\> EFI/BOOT/app/CapsuleApp.efi -E
+FS2:\> EFI/BOOT/app/CapsuleApp.efi -D capsule1.bin
 FS2:\> EFI/BOOT/app/CapsuleApp.efi capsule1.bin
 ```
 
+#### `./fw/capsule-on-disk.log`
+Demonstrate that delivery of capsules via file on mass storage device ("on
+disk") works. When using this method, the firmware capsule is delivered as a
+file, copied to the EFI System Partition (ESP) under the `EFI/UpdateCapsule`
+folder.
+
+Start with a copy of the ACS image on an SD card or USB drive and put
+a copy of a signed capsule into the `BOOT` volume.
+Setup the system in its original state.
+Begin capture before releasing board from reset so that the initial
+firmware log messages are captured.
+Boot the ACS image, choose the default Grub option, and then press a
+key to break out of running the ACS tests.
+From the UEFI shell, use `CapsuleApp.efi` with the `-OD` option to install the
+new version of firmware with a signed capsule using the "on disk" method.
+`CapsuleApp.efi` should copy the capsule binary to the ESP and cause the board
+to reboot.
+Firmware update should be applied during system reboot and additional reboot
+might happen.
+The U-Boot console log should ultimately show a different version of firmware.
+
+```
+Shell> fs2:\
+FS2:\> EFI/BOOT/app/CapsuleApp.efi -D capsule1.bin
+FS2:\> EFI/BOOT/app/CapsuleApp.efi capsule1.bin -OD
+```
+
 #### `./fw/capsule*.bin`
-Place UEFI capsule binaries under `./fw/`, with a name matching `capsule*.bin`.
+Place UEFI signed capsule binaries under `./fw/`, with a name matching
+`capsule*.bin`.
 
 ### `./os-logs/`
 
@@ -204,7 +252,8 @@ After collecting the results the directory tree should look like this:
 │   ├── u-boot-sniff.log
 │   ├── uefi-sniff.log
 │   ├── capsule1.bin
-│   └── capsule-update.log
+│   ├── capsule-update.log
+│   └── capsule-on-disk.log
 ├── manual-results/
 ├── os-logs/
 │   ├── linux-distro1-version/
