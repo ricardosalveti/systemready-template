@@ -79,6 +79,7 @@ Run the following commands at U-Boot prompt and attach the logs:
     u-boot=> efidebug dh
     u-boot=> efidebug memmap
     u-boot=> efidebug tables
+    u-boot=> efidebug query
     u-boot=> efidebug boot dump
     u-boot=> efidebug capsule esrt
     u-boot=> bootefi hello ${fdtcontroladdr}
