@@ -1,17 +1,17 @@
 General information
 -------------------
 - Arm SystemReady Band: IR
-- System name:
-- Prepared by:
-- E-mail:
+- System name: Genio 1200-demo Board
+- Prepared by: Ricardo Salveti
+- E-mail: ricardo@foundries.io
 - Date:
 
 System Information
 ------------------
-- Company:
-- System:
-- SoC:
-- FW version:
+- Company: Foundries.io
+- System: Genio 1200-demo Board
+- SoC: MT8395
+- FW version: LmP v89 based on MTK BSP V22.2+
 - Memory:
 - Storage devices / disks:
 - Network controllers:
@@ -19,9 +19,10 @@ System Information
 
 Test Logs and Results
 ----------------------
-- ACS version used:
-- ACS URL (if pre-built binary):
+- ACS version used: v22.10_2.0.0_BETA-1
+- ACS URL (if pre-built binary): built from source
 - Changes to ACS (if built from source):
+  - Kernel updated to 6.1
 
 - Test Logs collected
 [ ] ACS - SCT
