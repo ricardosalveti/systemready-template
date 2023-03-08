@@ -1,0 +1,52 @@
+           CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       
+ 18:          0          0          0          0          0          0          0          0     GICv3  25 Level     vgic
+ 19:       2608       2459       2442       2397        512        469        545        584     GICv3  26 Level     arch_timer
+ 20:          0          0          0          0          0          0          0          0     GICv3  27 Level     kvm guest vtimer
+ 23:          0          0          0          0          0          0          0          0     GICv3  30 Level     kvm guest ptimer
+ 25:         75        130        147         52        262        292        202        375     GICv3 297 Level     timer@10017000
+128:          0          0          0          0          0          0          0          0   mt-eint 101 Edge      mt6360_irqs
+133:          0          0          0          0          0          0          0          0   mt-eint 106 Edge      volume_up
+156:          0          0          0          0          0          0          0          0   mt-eint 129 Edge      11240000.mmc cd
+249:          0          0          0          0          0          0          0          0   mt-eint 222 Level     mt6358-irq
+252:          0          0          0          0          0          0          0          0  GICv3-23   0 Level     arm-pmu
+253:          0          0          0          0          0          0          0          0  GICv3-23   1 Level     arm-pmu
+254:          0          0          0          0          0          0          0          0     GICv3 275 Level     mt-pmic-pwrap
+255:        723          0          0          0          0          0          0          0     GICv3 173 Level     ttyS0
+264:        670          0          0          0          0          0          0          0     GICv3 187 Level     11d01000.i2c
+287:          0          0          0          0          0          0          0          0  mt6360_irqs  96 Edge      buck1_pgb_evt
+288:          0          0          0          0          0          0          0          0  mt6360_irqs 100 Edge      buck1_oc_evt
+289:          0          0          0          0          0          0          0          0  mt6360_irqs 101 Edge      buck1_ov_evt
+290:          0          0          0          0          0          0          0          0  mt6360_irqs 102 Edge      buck1_uv_evt
+291:          0          0          0          0          0          0          0          0  mt6360_irqs 104 Edge      buck2_pgb_evt
+292:          0          0          0          0          0          0          0          0  mt6360_irqs 108 Edge      buck2_oc_evt
+293:          0          0          0          0          0          0          0          0  mt6360_irqs 109 Edge      buck2_ov_evt
+294:          0          0          0          0          0          0          0          0  mt6360_irqs 110 Edge      buck2_uv_evt
+295:          0          0          0          0          0          0          0          0  mt6360_irqs 113 Edge      ldo1_oc_evt
+296:          0          0          0          0          0          0          0          0  mt6360_irqs 114 Edge      ldo2_oc_evt
+297:          0          0          0          0          0          0          0          0  mt6360_irqs 115 Edge      ldo3_oc_evt
+298:          0          0          0          0          0          0          0          0  mt6360_irqs 117 Edge      ldo5_oc_evt
+299:          0          0          0          0          0          0          0          0  mt6360_irqs 118 Edge      ldo6_oc_evt
+300:          0          0          0          0          0          0          0          0  mt6360_irqs 119 Edge      ldo7_oc_evt
+301:          0          0          0          0          0          0          0          0  mt6360_irqs 121 Edge      ldo1_pgb_evt
+302:          0          0          0          0          0          0          0          0  mt6360_irqs 122 Edge      ldo2_pgb_evt
+303:          0          0          0          0          0          0          0          0  mt6360_irqs 123 Edge      ldo3_pgb_evt
+304:          0          0          0          0          0          0          0          0  mt6360_irqs 125 Edge      ldo5_pgb_evt
+305:          0          0          0          0          0          0          0          0  mt6360_irqs 126 Edge      ldo6_pgb_evt
+306:          0          0          0          0          0          0          0          0  mt6360_irqs 127 Edge      ldo7_pgb_evt
+307:          0          0          0          0          0          0          0          0     GICv3 176 Level     11e00000.i2c
+308:          0          0          0          0          0          0          0          0     GICv3 179 Level     11e01000.i2c
+309:          0          0          0          0          0          0          0          0     GICv3 182 Level     11e02000.i2c
+310:        901          0          0          0          0          0          0          0     GICv3 163 Level     11230000.mmc
+311:          0          0          0          0          0          0          0          0     GICv3 167 Level     11240000.mmc
+312:          0          0          0          0          0          0          0          0     GICv3 160 Level     11201000.usb
+313:          0          0          0          0          0          0          0          0     GICv3 161 Level     xhci-hcd:usb1
+314:          0          0          0          0          0          0          0          0     GICv3 565 Level     xhci-hcd:usb3
+315:       4548          0          0          0          0          0          0          0     GICv3 568 Level     xhci-hcd:usb5
+IPI0:        89        125         81        135        163         73        168        119       Rescheduling interrupts
+IPI1:       948        711        968        743       3542       1448       1256       2905       Function call interrupts
+IPI2:         0          0          0          0          0          0          0          0       CPU stop interrupts
+IPI3:         0          0          0          0          0          0          0          0       CPU stop (for crash dump) interrupts
+IPI4:        67        191        199        138        302        284        328        317       Timer broadcast interrupts
+IPI5:         0          0          0          0          0          0          0          0       IRQ work interrupts
+IPI6:         0          0          0          0          0          0          0          0       CPU wake-up interrupts
+Err:          0

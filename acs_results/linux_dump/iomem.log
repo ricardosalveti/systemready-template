@@ -1,0 +1,79 @@
+00000588-000005c3 : mt6359-rtc
+0c000000-0c03ffff : GICD
+0c040000-0c23ffff : GICR
+10000000-10000fff : 10000000.syscon syscon@10000000
+10005000-10005fff : 10005000.pinctrl iocfg0
+10007000-100070ff : 10007000.watchdog watchdog@10007000
+1000b000-1000bfff : 10005000.pinctrl eint
+10024000-10024fff : 10024000.pwrap pwrap
+10220080-102200ff : 11e00000.i2c i2c@11e00000
+10220200-1022027f : 11e01000.i2c i2c@11e01000
+10220380-102203ff : 11e02000.i2c i2c@11e02000
+10220600-1022067f : 11d01000.i2c i2c@11d01000
+10315000-10319fff : 10315000.infra-iommu infra-iommu@10315000
+11001100-1100111f : serial
+11001200-1100121f : serial
+11200000-11200fff : 11200000.xhci mac
+11201000-11203dfe : 11201000.usb mac
+11203e00-11203eff : 11201000.usb ippc
+11230000-1123ffff : 11230000.mmc mmc@11230000
+11240000-11240fff : 11240000.mmc mmc@11240000
+112a0000-112a0fff : 112a0000.xhci mac
+112a3e00-112a3eff : 112a1000.usb ippc
+112b0000-112b0fff : 112b0000.xhci mac
+112b3e00-112b3eff : 112b0000.xhci ippc
+11c10000-11c10fff : 11c10000.efuse efuse@11c10000
+11c40000-11c406ff : phy-soc:t-phy@11c40000.0 usb-phy@0
+11c50000-11c506ff : phy-soc:t-phy@11c50000.1 usb-phy@0
+11c70000-11c70fff : 11240000.mmc mmc@11240000
+11d01000-11d01fff : 11d01000.i2c i2c@11d01000
+11d10000-11d10fff : 10005000.pinctrl iocfg_bm
+11d30000-11d30fff : 10005000.pinctrl iocfg_bl
+11d40000-11d40fff : 10005000.pinctrl iocfg_br
+11e00000-11e00fff : 11e00000.i2c i2c@11e00000
+11e01000-11e01fff : 11e01000.i2c i2c@11e01000
+11e02000-11e02fff : 11e02000.i2c i2c@11e02000
+11e20000-11e20fff : 10005000.pinctrl iocfg_lm
+11e40000-11e406ff : phy-soc:t-phy@11e40000.2 usb-phy@0
+11e40700-11e40dff : phy-soc:t-phy@11e40000.3 usb-phy@700
+11eb0000-11eb0fff : 10005000.pinctrl iocfg_rb
+11f40000-11f40fff : 10005000.pinctrl iocfg_tl
+11f50000-11f50fff : 11230000.mmc mmc@11230000
+40000000-431fffff : System RAM
+43200000-43dfffff : reserved
+43e00000-4fffffff : System RAM
+  47ee2000-47f1dfff : reserved
+50000000-528fffff : reserved
+52900000-545fffff : System RAM
+  53000000-543fffff : reserved
+54600000-547fffff : reserved
+54800000-5fffffff : System RAM
+60000000-610fffff : reserved
+61100000-bead5fff : System RAM
+  62000000-633fffff : reserved
+  9b5c0000-9ce3ffff : Kernel code
+  9ce40000-9d59ffff : reserved
+  9d5a0000-9d9dffff : Kernel data
+  9fb60000-9fb7afff : reserved
+  9fd64000-9fd64fff : reserved
+  9fd65000-9fd65fff : reserved
+  b0a00000-be9fffff : reserved
+bead6000-bead6fff : reserved
+bead7000-bead9fff : System RAM
+  bead8000-bead8fff : reserved
+beada000-beadafff : reserved
+beadb000-beaddfff : System RAM
+beade000-beadffff : reserved
+beae0000-beae0fff : System RAM
+beae1000-beae4fff : reserved
+beae5000-bfeeffff : System RAM
+  bf7d7000-bfad7fff : reserved
+  bfad8000-bfb77fff : reserved
+  bfb7a000-bfb7bfff : reserved
+  bfb7c000-bfb7cfff : reserved
+  bfb7d000-bfb90fff : reserved
+  bfb91000-bfb91fff : reserved
+  bfb92000-bfeeffff : reserved
+bfef0000-bfefffff : reserved
+bff00000-bfffffff : System RAM
+  bff00000-bfffffff : reserved

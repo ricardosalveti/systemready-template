@@ -1,0 +1,130 @@
+
+
+ BSA Architecture Compliance Suite
+          Version 1.0.3
+
+ Starting tests with print level :  3
+
+
+ Creating Platform Information Tables
+ PE_INFO: Number of PE detected       :    8 
+ GIC_INFO: Number of GICD             :    1 
+ GIC INFO: GIC version                :    v3 
+ GIC_INFO: Number of ITS              :    0 
+ TIMER_INFO: Number of system timers  :    0 
+ WATCHDOG_INFO: Number of Watchdogs   :    0 
+ PCIE_INFO: Number of ECAM regions    :    0 
+ SMMU_INFO: Number of SMMU CTRL       :    0 
+ Peripheral: Num of USB controllers   :    0 
+ Peripheral: Num of SATA controllers  :    0 
+ Peripheral: Num of UART controllers  :    0 
+
+      ***  Starting PE tests ***  
+Operating System View:
+   1 : Check Arch symmetry across PE         
+       Reg compare failed for PE index=4 for Register: ID_AA64PFR0_EL1
+       Current PE value = 0x11112222         Other PE value = 0x1100000011111112
+       Failed on PE -    4
+       Checkpoint --  1                           : Result:  FAIL 
+   2 : Check for number of PE                     : Result:  PASS 
+   3 : Check for AdvSIMD and FP support           : Result:  PASS 
+   4 : Check PE 4KB Granule Support               : Result:  PASS 
+   6 : Check Cryptographic extensions             : Result:  PASS 
+   7 : Check Little Endian support                : Result:  PASS 
+   8 : Check EL1 and EL0 implementation           : Result:  PASS 
+   9 : Check for PMU and PMU counters             : Result:  PASS 
+  10 : Check PMU Overflow signal             
+       Invalid Interrupt ID number 0x50807DB 
+       GIC Install Handler Failed...
+       Failed on PE -    0
+       Checkpoint --  1                           : Result:  FAIL 
+  11 : Check num of Breakpoints and type          : Result:  PASS 
+  12 : Check Synchronous Watchpoints              : Result:  PASS 
+  13 : Check CRC32 instruction support            : Result:  PASS 
+  14 : Check PAuth if implementation         
+       Checkpoint --  1                           : Result:  SKIPPED 
+
+      *** One or more tests have Failed/Skipped.*** 
+
+      ***  Starting Memory Map tests ***  
+Operating System View:
+ 102 : Mem Access Response in finite time         : Result:  PASS 
+ 103 : PE must access all NS addr space           : Result:  PASS 
+
+       All Memory tests have passed!! 
+
+      ***  Starting GIC tests ***  
+Operating System View:
+ 201 : Check GIC version                          : Result:  PASS 
+ 203 : If PCIe, GICv3 then ITS, LPI          
+       Checkpoint --  1                           : Result:  SKIPPED 
+ 204 : Check GICv3 Security States                : Result:  PASS 
+ 205 : Non-secure SGIs are implemented            : Result:  PASS 
+ 206 : Check PPI Assignments for OS               : Result:  PASS 
+
+      *** One or more tests have Failed/Skipped.*** 
+
+      *** Starting System MMU tests ***  
+       No SMMU Controller Found, Skipping SMMU tests...
+
+      *** Starting Timer tests ***  
+Operating System View:
+ 401 : Check Counter Frequency                    : Result:  PASS 
+ 402 : SYS Timer if PE Timer not ON          
+       PE Timers are not always-on 
+       And no system wake up timer
+       Failed on PE -    0
+       Checkpoint --  1                           : Result:  FAIL 
+ 403 : Memory mapped timer check             
+       Checkpoint --  1                           : Result:  SKIPPED 
+ 404 : Generate Mem Mapped SYS Timer Intr    
+       Checkpoint --  1                           : Result:  SKIPPED 
+ 405 : Restore PE timer on PE wake up        
+       Checkpoint --  1                           : Result:  SKIPPED 
+
+      *** One or more tests have Failed/Skipped.*** 
+
+      *** Starting Power and Wakeup semantic tests ***  
+Operating System View:
+ 503 : Wake from EL0 PHY Timer Int                : Result:  PASS 
+ 504 : Wake from EL0 VIR Timer Int                : Result:  PASS 
+ 505 : Wake from EL2 PHY Timer Int                : Result:  PASS 
+ 501 : Wake from Watchdog WS0 Int            
+       Checkpoint --  1                           : Result:  SKIPPED 
+ 502 : Wake from System Timer Int            
+       Checkpoint --  1                           : Result:  SKIPPED 
+
+      *** One or more tests have Failed/Skipped.*** 
+
+      *** Starting Peripheral tests ***  
+Operating System View:
+ 601 : USB CTRL Interface                    
+       Checkpoint --  1                           : Result:  SKIPPED 
+ 602 : Check SATA CTRL Interface             
+       Checkpoint --  1                           : Result:  SKIPPED 
+ 603 : Check Arm BSA UART register offsets   
+       No UART defined by Platform      
+       Failed on PE -    0
+       Checkpoint --  1                           : Result:  FAIL 
+ 606 : 16550 compatible UART                 
+       No UART defined by Platform      
+       Failed on PE -    0
+       Checkpoint --  1                           : Result:  FAIL 
+
+      *** One or more tests have Failed/Skipped.*** 
+
+      *** Starting Watchdog tests ***  
+       No Watchdog Found, Skipping Watchdog tests...
+
+      *** Starting PCIe tests ***  
+      *** No ECAM region found, Skipping PCIE tests *** 
+
+      *** Starting PCIe Exerciser tests ***  
+       USER Override - Skipping all Exerciser tests 
+
+     ------------------------------------------------------- 
+     Total Tests run  =   34  Tests Passed  =   20  Tests Failed =    5
+     ------------------------------------------------------- 
+
+      *** BSA tests complete. Reset the system. *** 
+
