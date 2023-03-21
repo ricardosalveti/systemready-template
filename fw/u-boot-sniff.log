@@ -1,0 +1,730 @@
+U-Boot 2022.10+fiosr1+g5f325a2e60 (Feb 16 2023 - 07:50:21 +0000)
+
+CPU:   MediaTek MT8195
+DRAM:  2 GiB
+Disabling WDT
+Enabling SCP SRAM
+Core:  42 devices, 22 uclasses, devicetree: separate
+MMC:   mmc@11230000: 0
+Loading Environment from MMC... OK
+Warning: device tree node '/config/environment' not found
+In:    serial@11001100
+Out:   serial@11001100
+Err:   serial@11001100
+Net:   eth0: usb_ether
+Hit any key to stop autoboot:  0
+=> help
+?         - alias for 'help'
+base      - print or set address offset
+bdinfo    - print Board Info structure
+bootefi   - Boots an EFI payload from memory
+bootflow  - Boot flows
+bootm     - boot application image from memory
+bootp     - boot image via network using BOOTP/TFTP protocol
+clk       - CLK sub-system
+cmp       - memory compare
+cp        - memory copy
+date      - get/set/reset date & time
+dfu       - Device Firmware Upgrade
+dm        - Driver model low level access
+echo      - echo args to console
+editenv   - edit environment variable
+efidebug  - Configure UEFI environment
+env       - environment handling commands
+exit      - exit script
+ext4load  - load binary file from a Ext4 filesystem
+ext4ls    - list files in a directory (default /)
+ext4size  - determine a file's size
+false     - do nothing, unsuccessfully
+fastboot  - run as a fastboot usb or udp device
+fatinfo   - print information about filesystem
+fatload   - load binary file from a dos filesystem
+fatls     - list files in a directory (default /)
+fatmkdir  - create a directory
+fatrm     - delete a file
+fatsize   - determine a file's size
+fatwrite  - write file into a dos filesystem
+fdt       - flattened device tree utility commands
+fstype    - Look up a filesystem type
+fstypes   - List supported filesystem types
+gpt       - GUID Partition Table
+hash      - compute hash message digest
+help      - print command description/usage
+i2c       - I2C sub-system
+ln        - Create a symbolic link
+load      - load binary file from a filesystem
+loop      - infinite loop on address range
+ls        - list files in a directory (default /)
+md        - memory display
+mm        - memory modify (auto-incrementing address)
+mmc       - MMC sub system
+mmcinfo   - display MMC info
+mw        - memory write (fill)
+net       - NET sub-system
+nfs       - boot image via network using NFS protocol
+nm        - memory modify (constant address)
+panic     - Panic with optional message
+part      - disk partition related commands
+pinmux    - show pin-controller muxing
+printenv  - print environment variables
+random    - fill memory with random pattern
+reset     - Perform RESET of the CPU
+run       - run commands in an environment variable
+save      - save file to a filesystem
+saveenv   - save environment variables to persistent storage
+setenv    - set environment variables
+setexpr   - set environment variable as the result of eval expression
+showvar   - print local hushshell variables
+size      - determine a file's size
+sleep     - delay execution for some time
+source    - run script from memory
+sysboot   - command to get and boot from syslinux files
+test      - minimal test like /bin/sh
+tftpboot  - load file via network using TFTP protocol
+true      - do nothing, successfully
+ums       - Use the UMS [USB Mass Storage]
+usb       - USB sub-system
+usbboot   - boot from USB device
+version   - print monitor, compiler and linker version
+=> version
+U-Boot 2022.10+fiosr1+g5f325a2e60 (Feb 16 2023 - 07:50:21 +0000)
+
+aarch64-lmp-linux-gcc (GCC) 11.3.0
+GNU ld (GNU Binutils) 2.38.20220708
+=> printenv
+arch=arm
+baudrate=921600
+board=mt8195
+board_name=mt8195
+boot_a_script=load ${devtype} ${devnum}:${distro_bootpart} ${scriptaddr} ${prefix}${script}; source ${scriptaddr}
+boot_efi_binary=load ${devtype} ${devnum}:${distro_bootpart} ${kernel_addr_r} efi/boot/bootaa64.efi; if fdt addr -q ${fdt_addr_r}; then bootefi
+ ${kernel_addr_r} ${fdt_addr_r};else bootefi ${kernel_addr_r} ${fdtcontroladdr};fi
+boot_efi_bootmgr=if fdt addr -q ${fdt_addr_r}; then bootefi bootmgr ${fdt_addr_r};else bootefi bootmgr;fi
+boot_extlinux=sysboot ${devtype} ${devnum}:${distro_bootpart} any ${scriptaddr} ${prefix}${boot_syslinux_conf}
+boot_net_usb_start=usb start
+boot_prefixes=/ /boot/
+boot_script_dhcp=boot.scr.uimg
+boot_scripts=boot.scr.uimg boot.scr
+boot_syslinux_conf=extlinux/extlinux.conf
+boot_targets=mmc0 usb0
+bootcmd=setenv boot_targets 'usb0 mmc0'; load mmc 0:2 ${fdt_addr_r} dtb/${fdtfile}; run distro_bootcmd
+bootcmd_mmc0=devnum=0; run mmc_boot
+bootcmd_usb0=devnum=0; run usb_boot
+bootcount=1
+bootdelay=2
+bootlimit=3
+cpu=armv8
+distro_bootcmd=for target in ${boot_targets}; do run bootcmd_${target}; done
+efi_dtb_prefixes=/ /dtb/ /dtb/current/
+env_fdt_path=/config/environment
+ethaddr=de:ad:be:ef:00:01
+fdt_addr_r=0x44000000
+fdtcontroladdr=bfaf8820
+fdtfile=mt8195-demo.dtb
+fdtoverlay_addr_r=0x44c00000
+kernel_addr_r=0x45000000
+load_efi_dtb=load ${devtype} ${devnum}:${distro_bootpart} ${fdt_addr_r} ${prefix}${efi_fdtfile}
+loadaddr=0x4c000000
+mmc_boot=if mmc dev ${devnum}; then devtype=mmc; run scan_dev_for_boot_part; fi
+ramdisk_addr_r=0x46000000
+scan_dev_for_boot=echo Scanning ${devtype} ${devnum}:${distro_bootpart}...; for prefix in ${boot_prefixes}; do run scan_dev_for_extlinux; run s
+can_dev_for_scripts; done;run scan_dev_for_efi;
+scan_dev_for_boot_part=part list ${devtype} ${devnum} -bootable devplist; env exists devplist || setenv devplist 1; for distro_bootpart in ${de
+vplist}; do if fstype ${devtype} ${devnum}:${distro_bootpart} bootfstype; then run scan_dev_for_boot; fi; done; setenv devplist
+scan_dev_for_efi=setenv efi_fdtfile ${fdtfile}; for prefix in ${efi_dtb_prefixes}; do if test -e ${devtype} ${devnum}:${distro_bootpart} ${pref
+ix}${efi_fdtfile}; then run load_efi_dtb; fi;done;run boot_efi_bootmgr;if test -e ${devtype} ${devnum}:${distro_bootpart} efi/boot/bootaa64.efi
+; then echo Found EFI removable media binary efi/boot/bootaa64.efi; run boot_efi_binary; echo EFI LOAD FAILED: continuing...; fi; setenv efi_fd
+tfile
+scan_dev_for_extlinux=if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${boot_syslinux_conf}; then echo Found ${prefix}${boot_syslin
+ux_conf}; run boot_extlinux; echo SCRIPT FAILED: continuing...; fi
+scan_dev_for_scripts=for script in ${boot_scripts}; do if test -e ${devtype} ${devnum}:${distro_bootpart} ${prefix}${script}; then echo Found U
+-Boot script ${prefix}${script}; run boot_a_script; echo SCRIPT FAILED: continuing...; fi; done
+scriptaddr=0x40000000
+soc=mediatek
+stderr=serial@11001100
+stdin=serial@11001100
+stdout=serial@11001100
+usb_boot=usb start; if usb dev ${devnum}; then devtype=usb; run scan_dev_for_boot_part; fi
+usbnet_devaddr=de:ad:be:ef:00:01
+vendor=mediatek
+
+Environment size: 3130/4092 bytes
+=> printenv -e
+PlatformLang:
+    8be4df61-93ca-11d2-aa0d-00e098032b8c (EFI_GLOBAL_VARIABLE_GUID)
+    NV|BS|RT, DataSize = 0x6
+ExitBootServicesTestVariable:
+    f6fab04f-acaf-4af3-b9fa-dcf97fb4426f (f6fab04f-acaf-4af3-b9fa-dcf97fb4426f)
+    NV|BS|RT, DataSize = 0x8
+SecureBoot:
+    8be4df61-93ca-11d2-aa0d-00e098032b8c (EFI_GLOBAL_VARIABLE_GUID)
+    BS|RT|RO, DataSize = 0x1
+SetupMode:
+    8be4df61-93ca-11d2-aa0d-00e098032b8c (EFI_GLOBAL_VARIABLE_GUID)
+    BS|RT|RO, DataSize = 0x1
+AuditMode:
+    8be4df61-93ca-11d2-aa0d-00e098032b8c (EFI_GLOBAL_VARIABLE_GUID)
+    BS|RT|RO, DataSize = 0x1
+DeployedMode:
+    8be4df61-93ca-11d2-aa0d-00e098032b8c (EFI_GLOBAL_VARIABLE_GUID)
+    BS|RT|RO, DataSize = 0x1
+VendorKeys:
+    8be4df61-93ca-11d2-aa0d-00e098032b8c (EFI_GLOBAL_VARIABLE_GUID)
+    BS|RT|RO, DataSize = 0x1
+PlatformLangCodes:
+    8be4df61-93ca-11d2-aa0d-00e098032b8c (EFI_GLOBAL_VARIABLE_GUID)
+    BS|RT|RO, DataSize = 0x6
+OsIndicationsSupported:
+    8be4df61-93ca-11d2-aa0d-00e098032b8c (EFI_GLOBAL_VARIABLE_GUID)
+    BS|RT|RO, DataSize = 0x8
+=> bdinfo
+boot_params = 0x0000000000000000
+DRAM bank   = 0x0000000000000000
+-> start    = 0x0000000040000000
+-> size     = 0x0000000080000000
+flashstart  = 0x0000000000000000
+flashsize   = 0x0000000000000000
+flashoffset = 0x0000000000000000
+baudrate    = 921600 bps
+relocaddr   = 0x00000000bfefd000
+reloc off   = 0x0000000073efd000
+Build       = 64-bit
+current eth = usb_ether
+ethaddr     = de:ad:be:ef:00:01
+IP addr     = <NULL>
+fdt_blob    = 0x00000000bfaf8820
+new_fdt     = 0x00000000bfaf8820
+fdt_size    = 0x00000000000035a0
+lmb_dump_all:
+ memory.cnt  = 0x1
+ memory[0]      [0x40000000-0xbfffffff], 0x80000000 bytes flags: 0
+ reserved.cnt  = 0x3
+ reserved[0]    [0x43200000-0x43dfffff], 0x00c00000 bytes flags: 4
+ reserved[1]    [0x54600000-0x547fffff], 0x00200000 bytes flags: 4
+ reserved[2]    [0xbfaf4240-0xbfffffff], 0x0050bdc0 bytes flags: 0
+devicetree  = separate
+arch_number = 0x0000000000000000
+TLB addr    = 0x00000000bfff0000
+irq_sp      = 0x00000000bfaf8810
+sp start    = 0x00000000bfaf8810
+Early malloc usage: a78 / 4000
+=> rtc list
+Unknown command 'rtc' - try 'help'
+=> sf probe
+Unknown command 'sf' - try 'help'
+=> usb reset
+resetting USB...
+Bus xhci3@112b0000: Register 100010f NbrPorts 1
+Starting the controller
+USB XHCI 1.10
+scanning bus xhci3@112b0000 for devices... 4 USB Device(s) found
+       scanning usb for storage devices... 1 Storage Device(s) found
+=> usb info
+1: Hub,  USB Revision 3.0
+ - U-Boot XHCI Host Controller
+ - Class: Hub
+ - PacketSize: 512  Configurations: 1
+ - Vendor: 0x0000  Product 0x0000 Version 1.0
+   Configuration: 1
+   - Interfaces: 1 Self Powered 0mA
+     Interface: 0
+     - Alternate Setting 0, Endpoints: 1
+     - Class Hub
+     - Endpoint 1 In Interrupt MaxPacket 8 Interval 255ms
+
+2: Hub,  USB Revision 2.0
+ - Class: Hub
+ - PacketSize: 64  Configurations: 1
+ - Vendor: 0x0409  Product 0x005a Version 1.0
+   Configuration: 1
+   - Interfaces: 1 Self Powered Remote Wakeup 100mA
+     Interface: 0
+     - Alternate Setting 0, Endpoints: 1
+     - Class Hub
+     - Endpoint 1 In Interrupt MaxPacket 1 Interval 12ms
+
+3: Mass Storage,  USB Revision 2.0
+ - MXTronics MXT USB Device 150101v01
+ - Class: (from Interface) Mass Storage
+ - PacketSize: 64  Configurations: 1
+ - Vendor: 0xaaaa  Product 0x8816 Version 19.8
+   Configuration: 1
+   - Interfaces: 1 Bus Powered 100mA
+   - String: "100"
+     Interface: 0
+     - Alternate Setting 0, Endpoints: 2
+     - Class Mass Storage, Transp. SCSI, Bulk only
+     - String: "100"
+     - Endpoint 1 Out Bulk MaxPacket 512
+     - Endpoint 1 In Bulk MaxPacket 512
+
+4: Vendor specific,  USB Revision 2.0
+ - ASIX Elec. Corp. AX88x72A 4A3FCC
+ - Class: Vendor specific
+ - PacketSize: 64  Configurations: 1
+ - Vendor: 0x0b95  Product 0x772a Version 0.1
+   Configuration: 1
+   - Interfaces: 1 Bus Powered Remote Wakeup 250mA
+   - String: "0"
+     Interface: 0
+     - Alternate Setting 0, Endpoints: 3
+     - Class Vendor specific
+     - String: "0"
+     - Endpoint 1 In Interrupt MaxPacket 8 Interval 11ms
+     - Endpoint 2 In Bulk MaxPacket 512
+     - Endpoint 3 Out Bulk MaxPacket 512
+
+=> mmc rescan
+=> mmc list
+mmc@11230000: 0 (eMMC)
+=> mmc info
+Device: mmc@11230000
+Manufacturer ID: 11
+OEM: 0
+Name: 032GB4
+Bus Speed: 52000000
+Mode: MMC High Speed (52MHz)
+Rd Block Len: 512
+MMC version 5.1
+High Capacity: Yes
+Capacity: 29.1 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 KiB
+HC WP Group Size: 4 MiB
+User Capacity: 29.1 GiB WRREL
+Boot Capacity: 8 MiB ENH
+RPMB Capacity: 4 MiB ENH
+Boot area 0 is not write protected
+Boot area 1 is not write protected
+=> efidebug devices
+Device           Device Path
+================ ====================
+00000000bfaffeb0 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)
+00000000bffe4188 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/Uart(0,0,D,D)
+00000000bfb00f30 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/eMMC(0)/eMMC(0)
+00000000bfb010a0 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/eMMC(0)/eMMC(0)/HD(1,GPT,c43db581-f5b9-45bc-9684-8b4ddf614d82,0x400,0x2000)
+00000000bfb014b0 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/eMMC(0)/eMMC(0)/HD(2,GPT,c12a7328-f81f-11d2-ba4b-00a0c93ec93b,0x4000,0x100000)
+00000000bfb01d40 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/eMMC(0)/eMMC(0)/HD(3,GPT,63245aa4-3070-4250-80d2-f9ad48beb177,0x104000,0xc3de8)
+00000000bfb09b90 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/MAC(deadbeef0001,1)
+00000000bfb20b40 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/UsbClass(0x0,0x0,0x9,0x0,0x3)/UsbClass(0x409,0x5a,0x9,0x0,0x1)/UsbClass(0xaaaa,0x
+8816,0x0,0x0,0x0)
+00000000bfb20c00 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/UsbClass(0x0,0x0,0x9,0x0,0x3)/UsbClass(0x409,0x5a,0x9,0x0,0x1)/UsbClass(0xaaaa,0x
+8816,0x0,0x0,0x0)/HD(1,GPT,00a0e75e-2edc-40d6-b721-24895d331ee0,0x800,0x32000)
+00000000bfb20ed0 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/UsbClass(0x0,0x0,0x9,0x0,0x3)/UsbClass(0x409,0x5a,0x9,0x0,0x1)/UsbClass(0xaaaa,0x
+8816,0x0,0x0,0x0)/HD(2,GPT,ce99772e-6f19-47db-b39d-5d41696d74e4,0x32800,0xc7d2a)
+00000000bfb21260 /VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/UsbClass(0x0,0x0,0x9,0x0,0x3)/UsbClass(0x409,0x5a,0x9,0x0,0x1)/UsbClass(0xaaaa,0x
+8816,0x0,0x0,0x0)/HD(3,GPT,63a4473d-c10c-4b08-aa7c-b980816e8a4a,0xfa800,0x19000)
+=> efidebug drivers
+Driver           Name                 Image Path
+================ ==================== ====================
+00000000bfb04320 <NULL>               <built-in>
+=> efidebug dh
+Handle           Protocols
+================ ====================
+00000000bfaffeb0 Device Path, Device Path To Text, Device Path Utilities, Device-Tree Fixup, Unicode Collation 2, HII String, HII Database, Sim
+ple Text Output, Simple Text Input, Simple Text Input Ex
+00000000bffe4188 Device Path
+00000000bfb00f30 Device Path, Block IO
+00000000bfb010a0 Device Path, Block IO
+00000000bfb014b0 Device Path, Block IO, System Partition, Simple File System
+00000000bfb01d40 Device Path, Block IO, Simple File System
+00000000bfb04320 Driver Binding
+00000000bfb043a0 Firmware Management
+00000000bfb09b90 Simple Network, Device Path, PXE Base Code
+00000000bfb20b40 Device Path, Block IO
+00000000bfb20c00 Device Path, Block IO, Simple File System
+00000000bfb20ed0 Device Path, Block IO, Simple File System
+00000000bfb21260 Device Path, Block IO, Simple File System
+=> efidebug memmap
+Type             Start            End              Attributes
+================ ================ ================ ==========
+CONVENTIONAL     0000000040000000-00000000beac7000 WB
+BOOT DATA        00000000beac7000-00000000bead4000 WB
+LOADER DATA      00000000bead4000-00000000bead5000 WB
+BOOT DATA        00000000bead5000-00000000beade000 WB
+RUNTIME DATA     00000000beade000-00000000beadf000 WB|RT
+BOOT DATA        00000000beadf000-00000000beae2000 WB
+RUNTIME DATA     00000000beae2000-00000000beae3000 WB|RT
+BOOT DATA        00000000beae3000-00000000beae6000 WB
+RUNTIME DATA     00000000beae6000-00000000beae8000 WB|RT
+BOOT DATA        00000000beae8000-00000000beae9000 WB
+RUNTIME DATA     00000000beae9000-00000000beaed000 WB|RT
+BOOT DATA        00000000beaed000-00000000beaf8000 WB
+LOADER DATA      00000000beaf8000-00000000bfef0000 WB
+RUNTIME CODE     00000000bfef0000-00000000bff00000 WB|RT
+LOADER DATA      00000000bff00000-00000000c0000000 WB
+=> efidebug tables
+36122546-f7ef-4c8f-bd9b-eb8525b50c0b (EFI Conformance Profiles Table)
+b122a263-3661-4f68-9929-78f8b0d62180 (EFI System Resource Table)
+eb66918a-7eef-402a-842e-931d21c38ae9 (Runtime properties)
+eb9d2d31-2d88-11d3-9a16-0090273fc14d (SMBIOS table)
+=> efidebug query
+Error: Cannot query UEFI variables, r = 2
+=> efidebug boot dump
+=> efidebug capsule esrt
+========================================
+ESRT: fw_resource_count=2
+ESRT: fw_resource_count_max=2
+ESRT: fw_resource_version=1
+[entry 0]==============================
+ESRT: fw_class=0538FD5D-00DC-47C5-8D26-434803B1E327
+ESRT: fw_type=unknown
+ESRT: fw_version=0
+ESRT: lowest_supported_fw_version=0
+ESRT: capsule_flags=0
+ESRT: last_attempt_version=0
+ESRT: last_attempt_status=success
+[entry 1]==============================
+ESRT: fw_class=F65EC70E-45AB-40FB-9952-E5BC3070DA5C
+ESRT: fw_type=unknown
+ESRT: fw_version=0
+ESRT: lowest_supported_fw_version=0
+ESRT: capsule_flags=0
+ESRT: last_attempt_version=0
+ESRT: last_attempt_status=success
+========================================
+=> bootefi hello ${fdtcontroladdr}
+Booting /MemoryMapped(0x0,0xbff8af40,0x11e0)
+Hello, world!
+Running on UEFI 2.9
+Have SMBIOS table
+Have device tree
+Load options: <none>
+Boot device: /MemoryMapped(0x0,0xbff8af40,0x11e0)
+File path: <none>
+=> bootefi selftest ${fdtcontroladdr}
+
+Testing EFI API implementation
+
+Number of tests to execute: 40
+
+Setting up 'block device'
+Setting up 'block device' succeeded
+
+Executing 'block device'
+lib/efi_selftest/efi_selftest_block_device.c(407):
+TODO: Wrong volume label '', expected 'U-BOOT TEST'
+Executing 'block device' succeeded
+
+Tearing down 'block device'
+Tearing down 'block device' succeeded
+
+Setting up 'configuration tables'
+Setting up 'configuration tables' succeeded
+
+Executing 'configuration tables'
+Executing 'configuration tables' succeeded
+
+Setting up 'controllers'
+Setting up 'controllers' succeeded
+
+Executing 'controllers'
+Executing 'controllers' succeeded
+
+Setting up 'device path'
+Setting up 'device path' succeeded
+
+Executing 'device path'
+Installed device path protocols:
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/Uart(0,0,D,D)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/eMMC(0)/eMMC(0)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/eMMC(0)/eMMC(0)/HD(1,GPT,c43db581-f5b9-45bc-9684-8b4ddf614d82,0x400,0x2000)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/eMMC(0)/eMMC(0)/HD(2,GPT,c12a7328-f81f-11d2-ba4b-00a0c93ec93b,0x4000,0x100000)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/eMMC(0)/eMMC(0)/HD(3,GPT,63245aa4-3070-4250-80d2-f9ad48beb177,0x104000,0xc3de8)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/MAC(deadbeef0001,1)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/UsbClass(0x0,0x0,0x9,0x0,0x3)/UsbClass(0x409,0x5a,0x9,0x0,0x1)/UsbClass(0xaaaa,0x8816,0x0,0x0,0x0)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/UsbClass(0x0,0x0,0x9,0x0,0x3)/UsbClass(0x409,0x5a,0x9,0x0,0x1)/UsbClass(0xaaaa,0x8816,0x0,0x0,0x0)
+/HD(1,GPT,00a0e75e-2edc-40d6-b721-24895d331ee0,0x800,0x32000)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/UsbClass(0x0,0x0,0x9,0x0,0x3)/UsbClass(0x409,0x5a,0x9,0x0,0x1)/UsbClass(0xaaaa,0x8816,0x0,0x0,0x0)
+/HD(2,GPT,ce99772e-6f19-47db-b39d-5d41696d74e4,0x32800,0xc7d2a)
+/VenHw(e61d73b9-a384-4acc-aeab-82e828f3628b)/UsbClass(0x0,0x0,0x9,0x0,0x3)/UsbClass(0x409,0x5a,0x9,0x0,0x1)/UsbClass(0xaaaa,0x8816,0x0,0x0,0x0)
+/HD(3,GPT,63a4473d-c10c-4b08-aa7c-b980816e8a4a,0xfa800,0x19000)
+/VenHw(dbca4c98-6cb0-694d-0872-819c650cb7b8)/HD(1,MBR,0xd1535d21,0x1,0x7f)
+/VenHw(dbca4c98-6cb0-694d-0872-819c650cbbb1)
+/VenHw(dbca4c98-6cb0-694d-0872-819c650cbbb1)/VenHw(dbca4c98-6cb0-694d-0872-819c650cbba2)
+/VenHw(dbca4c98-6cb0-694d-0872-819c650cbbb1)/VenHw(dbca4c98-6cb0-694d-0872-819c650cbba2)/VenHw(dbca4c98-6cb0-694d-0872-819c650cbbc3)
+Executing 'device path' succeeded
+
+Tearing down 'device path'
+Tearing down 'device path' succeeded
+
+Setting up 'device path utilities protocol'
+Setting up 'device path utilities protocol' succeeded
+
+Executing 'device path utilities protocol'
+Executing 'device path utilities protocol' succeeded
+
+Executing 'conformance profile table'
+Executing 'conformance profile table' succeeded
+
+Setting up 'esrt'
+Setting up 'esrt' succeeded
+
+Executing 'esrt'
+Executing 'esrt' succeeded
+
+Tearing down 'esrt'
+Tearing down 'esrt' succeeded
+
+Setting up 'event groups'
+Setting up 'event groups' succeeded
+
+Executing 'event groups'
+Executing 'event groups' succeeded
+
+Setting up 'event services'
+Setting up 'event services' succeeded
+
+Executing 'event services'
+Executing 'event services' succeeded
+
+Tearing down 'event services'
+Tearing down 'event services' succeeded
+
+Setting up 'device tree'
+Setting up 'device tree' succeeded
+
+Executing 'device tree'
+compatible: mediatek,mt8195-demo
+Executing 'device tree' succeeded
+
+Setting up 'graphical output'
+Graphical output protocol is not available.
+Setting up 'graphical output' succeeded
+
+Executing 'graphical output'
+Executing 'graphical output' succeeded
+
+Tearing down 'graphical output'
+Tearing down 'graphical output' succeeded
+
+Setting up 'HII database protocols'
+Setting up 'HII database protocols' succeeded
+
+Executing 'HII database protocols'
+test_hii_database_new_package_list:
+test_hii_database_update_package_list:
+test_hii_database_list_package_lists:
+test_hii_database_export_package_lists:
+test_hii_database_register_package_notify:
+test_hii_database_unregister_package_notify:
+test_hii_database_find_keyboard_layouts:
+test_hii_database_get_keyboard_layout:
+test_hii_database_set_keyboard_layout:
+test_hii_database_get_package_list_handle:
+test_hii_string_new_string:
+new string id is 2
+test_hii_string_get_string:
+test_hii_string_set_string:
+test_hii_string_get_languages:
+got languages are en-US;zh-Hant
+test_hii_string_get_secondary_languages:
+no secondary languages
+Executing 'HII database protocols' succeeded
+
+Setting up 'load file protocol'
+Setting up 'load file protocol' succeeded
+
+Executing 'load file protocol'
+EFI application calling Exit
+Executing 'load file protocol' succeeded
+
+Tearing down 'load file protocol'
+Tearing down 'load file protocol' succeeded
+
+Setting up 'loaded image'
+Setting up 'loaded image' succeeded
+
+Executing 'loaded image'
+2 protocols installed on image handle
+Executing 'loaded image' succeeded
+
+Setting up 'load image from file'
+Setting up 'load image from file' succeeded
+
+Executing 'load image from file'
+EFI application calling Exit
+Executing 'load image from file' succeeded
+
+Tearing down 'load image from file'
+Tearing down 'load image from file' succeeded
+
+Setting up 'mem'
+Setting up 'mem' succeeded
+
+Executing 'mem'
+Executing 'mem' succeeded
+
+Setting up 'memory'
+Setting up 'memory' succeeded
+
+Executing 'memory'
+Executing 'memory' succeeded
+
+Setting up 'open protocol'
+Setting up 'open protocol' succeeded
+
+Executing 'open protocol'
+Executing 'open protocol' succeeded
+
+Tearing down 'open protocol'
+Tearing down 'open protocol' succeeded
+
+Setting up 'manage protocols'
+Setting up 'manage protocols' succeeded
+
+Executing 'manage protocols'
+Executing 'manage protocols' succeeded
+
+Tearing down 'manage protocols'
+Tearing down 'manage protocols' succeeded
+
+Setting up 'register protocol notify'
+Setting up 'register protocol notify' succeeded
+
+Executing 'register protocol notify'
+Executing 'register protocol notify' succeeded
+
+Tearing down 'register protocol notify'
+Tearing down 'register protocol notify' succeeded
+
+Setting up 'real time clock'
+Setting up 'real time clock' succeeded
+
+Executing 'real time clock'
+Time according to real time clock: 2023-02-16 07:50:21
+Executing 'real time clock' succeeded
+
+Setting up 'simple network protocol'
+using mtu3-gadget, OUT ep1out IN ep1in STATUS ep2in
+MAC de:ad:be:ef:00:01
+HOST MAC de:ad:be:ef:00:00
+RNDIS ready
+high speed config #2: 2 mA, Ethernet Gadget, using RNDIS
+USB RNDIS network up!
+Setting up 'simple network protocol' succeeded
+
+Executing 'simple network protocol'
+DHCP Discover
+DHCP Discover
+DHCP Discover
+DHCP Discover
+DHCP Discover
+DHCP Discover
+DHCP Discover
+DHCP Discover
+DHCP Discover
+DHCP Discover
+lib/efi_selftest/efi_selftest_snp.c(353):
+ERROR: Timeout occurred
+lib/efi_selftest/efi_selftest.c(114):
+ERROR: Executing 'simple network protocol' failed
+
+Tearing down 'simple network protocol'
+Tearing down 'simple network protocol' succeeded
+
+Setting up 'start image return'
+Setting up 'start image return' succeeded
+
+Executing 'start image return'
+EFI application returning w/o calling Exit
+Executing 'start image return' succeeded
+
+Tearing down 'start image return'
+Tearing down 'start image return' succeeded
+
+Setting up 'start image exit'
+Setting up 'start image exit' succeeded
+
+Executing 'start image exit'
+EFI application calling Exit
+Executing 'start image exit' succeeded
+
+Tearing down 'start image exit'
+Tearing down 'start image exit' succeeded
+
+Executing 'text output'
+
+Color palette
+00000000000000000000000000000010000000000000002000000000000000300000000000000040000000000000005000000000000000600000000000000070
+00000000000000010000000000000011000000000000002100000000000000310000000000000041000000000000005100000000000000610000000000000071
+00000000000000020000000000000012000000000000002200000000000000320000000000000042000000000000005200000000000000620000000000000072
+00000000000000030000000000000013000000000000002300000000000000330000000000000043000000000000005300000000000000630000000000000073
+00000000000000040000000000000014000000000000002400000000000000340000000000000044000000000000005400000000000000640000000000000074
+00000000000000050000000000000015000000000000002500000000000000350000000000000045000000000000005500000000000000650000000000000075
+00000000000000060000000000000016000000000000002600000000000000360000000000000046000000000000005600000000000000660000000000000076
+00000000000000070000000000000017000000000000002700000000000000370000000000000047000000000000005700000000000000670000000000000077
+00000000000000080000000000000018000000000000002800000000000000380000000000000048000000000000005800000000000000680000000000000078
+00000000000000090000000000000019000000000000002900000000000000390000000000000049000000000000005900000000000000690000000000000079
+000000000000000a000000000000001a000000000000002a000000000000003a000000000000004a000000000000005a000000000000006a000000000000007a
+000000000000000b000000000000001b000000000000002b000000000000003b000000000000004b000000000000005b000000000000006b000000000000007b
+000000000000000c000000000000001c000000000000002c000000000000003c000000000000004c000000000000005c000000000000006c000000000000007c
+000000000000000d000000000000001d000000000000002d000000000000003d000000000000004d000000000000005d000000000000006d000000000000007d
+000000000000000e000000000000001e000000000000002e000000000000003e000000000000004e000000000000005e000000000000006e000000000000007e
+000000000000000f000000000000001f000000000000002f000000000000003f000000000000004f000000000000005f000000000000006f000000000000007f
+Testing cursor column update
+                                                                                                                                             "
+Executing 'text output' succeeded
+
+Setting up 'task priority levels'
+Setting up 'task priority levels' succeeded
+
+Executing 'task priority levels'
+Executing 'task priority levels' succeeded
+
+Tearing down 'task priority levels'
+Tearing down 'task priority levels' succeeded
+
+Setting up 'unicode collation'
+Setting up 'unicode collation' succeeded
+
+Executing 'unicode collation'
+Executing 'unicode collation' succeeded
+
+Setting up 'variables'
+Setting up 'variables' succeeded
+
+Executing 'variables'
+Executing 'variables' succeeded
+
+Setting up 'watchdog timer'
+Setting up 'watchdog timer' succeeded
+
+Executing 'watchdog timer'
+Executing 'watchdog timer' succeeded
+
+Tearing down 'watchdog timer'
+Tearing down 'watchdog timer' succeeded
+
+Setting up 'crc32'
+Setting up 'crc32' succeeded
+
+Setting up 'ExitBootServices'
+Setting up 'ExitBootServices' succeeded
+
+Setting up 'variables at runtime'
+Setting up 'variables at runtime' succeeded
+
+Setting up 'virtual address map'
+Setting up 'virtual address map' succeeded
+
+Boot services terminated
+
+Executing 'crc32'
+Executing 'crc32' succeeded
+
+Executing 'ExitBootServices'
+
+Boot services terminated
+Executing 'ExitBootServices' succeeded
+
+Executing 'variables at runtime'
+Executing 'variables at runtime' succeeded
+
+Executing 'virtual address map'
+Executing 'virtual address map' succeeded
+
+Summary: 1 failures
+
+Preparing for reset. Press any key...
